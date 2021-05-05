@@ -37,7 +37,7 @@ The position is the x,y coordinate of the top-left corner of the object, where (
 ..image:: images/image_url.png
 When an image is selected, a dialog appears at the bottom of the Shape configurer, permitting the user to choose the URL for the image.  
 ..image:: images/borders.png
-The *Borders* configurer, below  the shape configurer, offers the user the ability to control the color, width, and radius of corners, and the type of line that forms the borders (solid, dotted, or dashed).
+The *Borders* configurer, below  the shape configurer, offers the user the ability to control the color, width, and radius of corners, and the type of line that forms the borders (solid, dotted, dashed, ridged, double, groove, or inset). Hidden and none, two other border options, are equivalent to 
 ..image:: images/text_sidebar.png
 The *Text* controller only appears when a Text item is selected, and it is used to control the textual properties of a text object.  These are:
 - The font family and weigt (fine to extra-bold)
@@ -48,7 +48,7 @@ The *Text* controller only appears when a Text item is selected, and it is used 
 - Whether the text box size is set by the user or grows and shrinks with the storing
 - The padding control gives the spacing between the text boundary and the boundary of the object, in pixels
 
-There are also two buttons, next to the color chooser, which permit a user to copy style (the standard copy icon), or paste a copied style (the paste brush).
+There are also three buttons, next to the color chooser, which permit a user to copy style (the standard copy icon), paste a copied style (the paste brush), or clear all formatting (the x).
 
 
 
@@ -57,10 +57,22 @@ The Context Menu
 ..image:: images/context_menu.png
 The context menu appears when the object is right-clicked and selection mode is enabled.  It controls the ordering of objects, front-to-back.
 
-Galyleo Data Architecture
-=========================
+Galyleo Data Architecture And Flow
+===================================
+The data flow in Galyleo is shown here.  Data is produced in a Jupyter Notebook, and then sent to a dashboard via the Galyleo library.  The object sent to a dashboard is a Table, which is conceptually a SQL database table -- a list of columns, each with a type, and a list of list of rows, which form the Table's data.  The data is then optionally passed through *filters*.  A *Filter* is a user interface element that selects a value (or range of values) from a column.  This can be used to choose subsets of rows from a particular table, to create what we call a *View*.  
+A *View* is a subset of a table; a selection (and, potentially, a reordering) of the columns of a table, and a subset of its rows, chosen by one or more Filters.  Static  charts can take as input *Table*; these charts display the same data, independent of user actions.  Dynamic charts take as input a View, which shows the data as filtered by the user  through user inputs.   
+
+..image:: images/dataflow.png
 Tables
 ------
+A Table is equivalent to  a SQL database table -- a list of columns, each with a type, and a list of list of rows, which form the Table's *data*.*  A table has a name, which must be unique among tables and views, a source, a schema, and data.
+A *schema* is a list of records of the form {"name": <name>, "type": <type>}, where <name> is the column name and type is the column type, which is chosen from the set {number, string, boolean, date, datetime, timeofday}.  These are captureds in the galyleoconstants library GALYLEO_STRING, GALYLEO_NUMBER, GALYLEO_BOOLEAN, GALYLEO_DATE, GALYLEO_DATETIME, GALYLEO_TIME_OF_DAY.
+The Table data is a list of lists, where each list is a row of  the table.  Each row must meet two conditions:
+- The entry in column _i_ must be of the type of schema entry _i_
+- It must have the same length as the schema
+  
+
+
 Filters
 -------
 Views
