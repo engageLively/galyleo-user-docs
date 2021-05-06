@@ -1,12 +1,17 @@
 **************
 USER GUIDE
+**************
 
 Launching A Dashboard
 =====================
 A new Galyleo Dashboard can be launched from the JupyterLab launcher or from the File>New menu:
-.. image:: images/new_dashboard_.png
+
+.. image:: images/new_dashboard.png
+
 An existing dashboard is saved as a .gd.json file, and is denoted with the Galyleo star logo:
+
 .. image:: images/open.png
+
 It can be opened in the usual way, with a double-click.
 
 The Galyleo User Interface
@@ -18,28 +23,45 @@ The Top Bar
 The top bar controls are in the top left of the dashboard.  They are primarily used to choose between selection mode (when the user is designing the dashboard) and interaction mode (when the user is interacting with the dashboard, e.g, manipulating a slider).  The practical difference is that when the user is in interaction mode (the arrow is highlighted) a Halo appears over the clicked item and the sidebar is shown; when in interaction mode (the hand is selected) the object is manipulated on click.
 When Text (the A) is selected, a user click brings up a text box.  When a shape is selected (one of Rectangle, Ellipse, Image, or Label) the appropriate shape is drawn in response to a user click.
 The last item on the top bar is a lifesaver icon, which brings up a bug-report dialog.
+
 .. image:: images/topbar.png
+
 The Halo and the Side Bar
 -------------------------
 The Halo and the Side Bar are used to configure an object when it's created, and can also be used to configure physical properties of charts and filters.  The Halo automatically appears when an object is clicked on and Selection mode is enabled (the arrow icon in the top bar.  The side bar automatically appears when a shape or text is created, or when the knob in the middle of the sidebar is clicked.  
-..image:: images/halo_sidebar.png
+
+.. image:: images/halo_sidebar.png
+
 The Halo shows control points and tools around the selected object.  The eight control points in the inner halo are used to change the width and height of the object.  The tool in the bottom-left corner is used to rotate the object.  The cross on the top bar is used to move it.  The trash can on the bottom left is used to delete the object.
+
 The Side bar consists of two parts.  The top one, which we'll return to later, manages Tables, Filters, Views, and Charts.  The bottom part is used to configure objects.  It has three sections, each activated by clicking on the chevron next to the name.
 
 The *Shape* configurer is shown in the image, with its eight components shown.  They are used to configure the fill (color) and opacity of the object, as well as whether the object casts a drop shadow. 
 
-..image:: images/color_choose.png
+.. image:: images/color_chooser.png
+
 The Color Chooser offers two modes to choose the color of an object.  The first, found by clicking the left-hand rectangle, brings up a palette of colors to choose from.
-..image:: images/color_wheel.png
+
+.. image:: images/color_wheel.png
+
 The second permits a fine-grained choice.  The Hue bar is used to set the area of the rainbow to pick a color from; dragging the dot in the left-hand square gives the user the ability to choose a specific color.  The slider at the bottom controls opacity/transparency of the color (as opposed  to the object itself).  Finally, the text box gives the user the ability to specify an RGB color, entered as six hex digits.
-The "Clipmode" gives the user the ability to control what happens when the object is too big for its bounding box.  The choices are "visible" (overflows), "hidden" (cut off), "scroll" (scrollbars appear at the right and/or bottom of the object, and "auto" -- the system chooses.
+
+The "Clipmode" menu gives the user the ability to control what happens when the object is too big for its bounding box.  The choices are "visible" (overflows), "hidden" (cut off), "scroll" (scrollbars appear at the right and/or bottom of the object, and "auto" -- the system chooses.
+
 The position is the x,y coordinate of the top-left corner of the object, where (0,0) is the top-left corner of the dashboard; x increases left-to-right, and y top-to-bottom.
-..image:: images/image_url.png
+
+.. image:: images/image_url.png
+
 When an image is selected, a dialog appears at the bottom of the Shape configurer, permitting the user to choose the URL for the image.  
-..image:: images/borders.png
-The *Borders* configurer, below  the shape configurer, offers the user the ability to control the color, width, and radius of corners, and the type of line that forms the borders (solid, dotted, dashed, ridged, double, groove, or inset). Hidden and none, two other border options, are equivalent to 
-..image:: images/text_sidebar.png
+
+.. image:: images/borders.png
+
+The *Borders* configurer, below  the shape configurer, offers the user the ability to control the color, width, and radius of corners, and the type of line that forms the borders (solid, dotted, dashed, ridged, double, groove, or inset). Hidden and none, two other border options, are equivalent to no border.
+
+.. image:: images/text_sidebar.png
+
 The *Text* controller only appears when a Text item is selected, and it is used to control the textual properties of a text object.  These are:
+
 - The font family and weigt (fine to extra-bold)
 - The font style (bold, italic, underline, hyperlink)
 - The font size and color
@@ -50,73 +72,97 @@ The *Text* controller only appears when a Text item is selected, and it is used 
 
 There are also three buttons, next to the color chooser, which permit a user to copy style (the standard copy icon), paste a copied style (the paste brush), or clear all formatting (the x).
 
-
-
 The Context Menu 
 -----------------------------
-..image:: images/context_menu.png
+
+.. image:: images/context_menu.png
+
 The context menu appears when the object is right-clicked and selection mode is enabled.  It controls the ordering of objects, front-to-back.
 
 Galyleo Data Architecture And Flow
 ===================================
 The data flow in Galyleo is shown here.  Data is produced in a Jupyter Notebook, and then sent to a dashboard via the Galyleo library.  The object sent to a dashboard is a Table, which is conceptually a SQL database table -- a list of columns, each with a type, and a list of list of rows, which form the Table's data.  The data is then optionally passed through *filters*.  A *Filter* is a user interface element that selects a value (or range of values) from a column.  This can be used to choose subsets of rows from a particular table, to create what we call a *View*.  
+
 A *View* is a subset of a table; a selection (and, potentially, a reordering) of the columns of a table, and a subset of its rows, chosen by one or more Filters.  Static  charts can take as input *Table*; these charts display the same data, independent of user actions.  Dynamic charts take as input a View, which shows the data as filtered by the user  through user inputs.   
 
-..image:: images/dataflow.png
+.. image:: images/dataflow.png
+
 Tables
 ------
 A Table is equivalent to  a SQL database table -- a list of columns, each with a type, and a list of list of rows, which form the Table's *data*.*  A table has a name, which must be unique among tables and views, a source, a schema, and data.
-A *schema* is a list of records of the form {"name": <name>, "type": <type>}, where <name> is the column name and type is the column type, which is chosen from the set {number, string, boolean, date, datetime, timeofday}.  These are captureds in the galyleoconstants library GALYLEO_STRING, GALYLEO_NUMBER, GALYLEO_BOOLEAN, GALYLEO_DATE, GALYLEO_DATETIME, GALYLEO_TIME_OF_DAY.
-The Table data is a list of lists, where each list is a row of  the table.  Each row must meet two conditions:
-- The entry in column _i_ must be of the type of schema entry _i_
-- It must have the same length as the schema
-Tables are formed using the GalyleoTable class in the galyleo_table Python module.
+A *schema* is a list of records of the form ``{"name": <name>, "type": <type>}``, where <name> is the column name and type is the column type, which is chosen from the set ``{"number", "string", "boolean", "date", "datetime", "timeofday"}``.  These are captured in the ``galyleoconstants`` library ``GALYLEO_STRING, GALYLEO_NUMBER, GALYLEO_BOOLEAN, GALYLEO_DATE, GALYLEO_DATETIME, GALYLEO_TIME_OF_DAY``.
 
-Here's a simple example of a Table, which we'll use throughout this tutorial
+The Table data is a list of lists, where each list is a row of  the table.  Each row must meet two conditions:
+
+- The entry in column *i* must be of the type of schema entry *i*
+- It must have the same length as the schema
+  
+Tables are formed using the ``GalyleoTable`` class in the ``galyleo_table`` Python module.
+
+Here's a simple example of a Table, which we'll use throughout this tutorial:
+
 .. csv-table:: Cereal Example
    :file: cereal.csv
    :header-rows: 1
 
 This is a formatted version of the table.  The schema is:
-.. code-block:: json
-[
-    {"name": "name", "type": GALYLEO_STRING},
-    {"name": "mfr", "type": GALYLEO_STRING},
-    {"name": "type", "type": GALYLEO_STRING},
-    {"name": "calories", "type": GALYLEO_NUMBER},
-    {"name": "fiber", "type": GALYLEO_NUMBER},
-    {"name": "rating", "type": GALYLEO_NUMBER}
-]
+::
+
+   [
+       {"name": "name", "type": GALYLEO_STRING},
+       {"name": "mfr", "type": GALYLEO_STRING},
+       {"name": "type", "type": GALYLEO_STRING},
+       {"name": "calories", "type": GALYLEO_NUMBER},
+       {"name": "fiber", "type": GALYLEO_NUMBER},
+       {"name": "rating", "type": GALYLEO_NUMBER}
+   ]
 
 And the first data row is:
-.. code-block:: json
-["100% Bran","N","C",70,10,68.402973]
+::
+
+   ["100% Bran","N","C",70,10,68.402973]
 
 Filters
 -------
 A Filter is a user-interface element that selects rows from tables, based on values from an individual, named column.  A *Select* Filter chooses rows whose value in the named column is equal to the filter's value.  For example, a Select Filter over the type column in our example whose value is "H" would select rows:
-+----------------------+-----+----+--------+---------------+
-|name                  | mfr |type|calories|fiber|rating   |
-|Cream of Wheat (Quick)|N    |H   |100     |1    |64.533816|
-|Maypo                 |A    |H   |100     |0    |54.850917|
-+----------------------+-----+----+--------+---------------+
+
++-----------------------+------+------+----------+-------+-----------+
+| name                  | mfr  | type | calories | fiber | rating    |
++=======================+======+======+==========+=======+===========+
+| Cream of Wheat (Quick)| N    | H    | 100      | 1     | 64.533816 |
++-----------------------+------+------+----------+-------+-----------+
+| Maypo                 | A    | H    | 100      | 0     | 54.850917 |
++-----------------------+------+------+----------+-------+-----------+
 
 A *Range* filter chooses rows whose value lies between the two values of the filter.  For example, a Range Filter over the calories column whose minimum is 50 and whose maximum is 70 would select the  rows 
-+-------------------------+---+----+--------+---------------+
-|name                     |mfr|type|calories|fiber|rating   |
-|100% Bran                |N  |C   |70      |10   |68.402973|
-|All-Bran                 |K  |C   |70      |9    |59.425505|
-|All-Bran with Extra Fiber|K  |C   |50      |14   |93.704912|
-+-------------------------+---+----+--------+---------------+
+
++--------------------------+-----+------+----------+-------+-----------+
+| name                     | mfr | type | calories | fiber | rating    |
++==========================+=====+======+==========+=======+===========+
+| 100% Bran                | N   | C    | 70       | 10    | 68.402973 |
++--------------------------+-----+------+----------+-------+-----------+
+| All-Bran                 | K   | C    | 70       | 9     | 59.425505 |
++--------------------------+-----+------+----------+-------+-----------+
+| All-Bran with Extra Fiber| K   | C    | 50       | 14    | 93.704912 |
++--------------------------+-----+------+----------+-------+-----------+
+
 *Range* and *Select* specify the functional properties of filters (whether the filter selects a specific value or all values in a range).  The physical properties of a filter are dependent  on the functional properties of the filter, the data type of the column, and user experience factors.  For example, a spinner and a slider are both Select filters over numeric columns, but are very different widgets.  At this writing, the *current* set of supported filters are:
+
 +---------------+-------------+-------------+
 | Filter        | Filter Type | Column Type |
++===============+=============+=============+
 | List          | Select      | any         |
++---------------+-------------+-------------+
 | Dropdown      | Select      | any         |
++---------------+-------------+-------------+
 | Spinner       | Select      | Number      |
++---------------+-------------+-------------+
 | Slider        | Select      | Number      |
++---------------+-------------+-------------+
 | Min/Max       | Range       | Number      |
++---------------+-------------+-------------+
 | Double Slider | Range       | Number      |
++---------------+-------------+-------------+
 | Toggle        | Select      | Boolean     |
 +---------------+-------------+-------------+
 
@@ -128,17 +174,20 @@ A View is chosen with:
 - a fixed subset (and potential reordering) of columns
 - a set of filters which select the rows of the table.  The filters are considered to have acted in sequence, and thus the rows preserved are the logical AND of the applied filters.
 For example, suppose we wanted to construct a View with columns name, rating from our table, and had a range filter on column calories and a select filter on column mfr.  The View would be:
-.. code-block:: json
-{ table": "cereal",
-  "columns": ["name", "rating"],
-  "filters": ["mfrFilter", "calorieFilter"]
-}
+::
+
+  { table": "cereal",
+    "columns": ["name", "rating"],
+    "filters": ["mfrFilter", "calorieFilter"]
+  }
 
 And, if mfrFilter was set to "N" (Nabisco) and calorieFilter to [50, 90], the data in the view would be:
-+---------+---------+
-|name     |rating   |
-|100% Bran|68.402973|
-+---------+---------+
+
++----------+----------+
+| name     | rating   |
++==========+==========+
+| 100% Bran| 68.402973|
++----------+----------+
 
 Charts
 ------
@@ -156,9 +205,12 @@ Names and Namespaces
 --------------------
 References are by name in Galyleo; each object (Table, Filter, View, or Chart)  has a name.  Since a Chart can take input from a View or a Table, Views and Tables share the same namespace (Data Source) and a Table cannot have the same name as a View.  Similarly, since every Chart is also a Filter, Charts and Filters share the same namespace (Data Selectors), and a Chart cannot have the same name as a Filter or another Chart.  
 Objects in different namespaces can share a name.  For example, it's quite common for a View and a Chart to share a name, when the View is the data source for the Chart and isn't otherwise used.
+
 +---------------+-----------------+
 | Namespace     | Objects         |
++===============+=================+
 | Data Source   | Tables, Views   |
++---------------+-----------------+
 | Data Selector | Charts, Filters |
 +---------------+-----------------+
 
