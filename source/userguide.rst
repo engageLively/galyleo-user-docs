@@ -247,7 +247,7 @@ The anticipated method of loading a table is to send it from a Notebook.  The Ga
 
 ::
 
-  from galyleo.galyleo_client import GalyleoClient
+  from galyleo.galyleo_jupyterlab_client import GalyleoClient
   from galyleo.galyleo_table import GalyleoTable
   from galyleo.galyleoconstants import GALYLEO_STRING, GALYLEO_NUMBER
   import csv
