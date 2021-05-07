@@ -7,6 +7,7 @@ Overview
 Galyleo is a package  for the  drag-and-drop  design and publication of  interactive dashboards driven by Jupyter Notebooks.  It is available as an extension to JupyterLab, and is also available for other Jupyter enviroments or other programs.  A similar dashboard can be found here: .. _elections: https://editor.engagelively.com/lively.freezer/frozenParts/rick/US_Presidential_Election/index.html/.
 
 This dashboard is designed entirely in Galyleo:
+
 .. image:: images/FullDashboard.png
 
 Galyleo was designed to fit  seamlessly into  the Jupyter workflow.  A Galyleo document is stored on the Jupyter Hub’s storage system, and the Galyleo Editor is simply another tab in a standard JupyterLab environment.  In other words, it is  simply another tool in JupyterLab to complement the Notebook environment.  
