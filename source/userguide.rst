@@ -1,5 +1,5 @@
 **************
-USER GUIDE
+User Guide
 **************
 
 Launching A Dashboard
@@ -25,6 +25,7 @@ When Text (the A) is selected, a user click brings up a text box.  When a shape 
 The last item on the top bar is a lifesaver icon, which brings up a bug-report dialog.
 
 .. image:: images/topbar.png
+
 
 The Halo and the Side Bar
 -------------------------
@@ -176,7 +177,8 @@ A View is chosen with:
 For example, suppose we wanted to construct a View with columns name, rating from our table, and had a range filter on column calories and a select filter on column mfr.  The View would be:
 ::
 
-  { table": "cereal",
+  {
+    "table": "cereal",
     "columns": ["name", "rating"],
     "filters": ["mfrFilter", "calorieFilter"]
   }
@@ -220,15 +222,124 @@ This section covers the library and user interface elements for sending Tables f
 
 The Galyleo UI
 --------------
+Key elements of the Galyleo UI can be seen in the Tables section of the sidebar, shown here with annotations.
+
+.. image:: images/tables-edit.png
+
+The tab selectors choose the category of item being viewed.  Here, it is the list of Tables (the Tables tab is highlighted in orange).  To the right of each Table name is an inspection icon. Clicking on this gives a preview of the selected table in a popup window.  *Warning:* this should be done carefully, since viewing large tables can cause performance issues.  Clicking on the "Add Table" button brings up a popup, inviting a load of a Table in intermediate form from an URL. 
+
+The sidebar is closed either by clicking on the orange triangle in the center of the sidebar's left edge, or on the close button on the top right.
+
+Clicking on the pen icon on the top right of the Table list toggles between inspection mode and edit mode.
+
+.. image:: images/edit-mode.png
+
+When in edit mode, clicking on the circle to the  left of a table name deletes the circle.  Clicking on the pen icon again restores inspection mode.
+
+Every element of the Table UI is present for all classes of element, (Tables, Filters, Views, and Charts).  The pen is present in all lists to switch between inspection/configuration mode for all classes, each class has an Add button, and the close-sidebar buttons are always present.
+
 
 Sending Tables to the Dashboard
 --------------------------------
+The anticipated method of loading a table is to send it from a Notebook.  The Galyleo Client document has a detailed description of how to do that.  The brief version is to collect the data in a tabular forma, either a list of lists or a Pandas dataframe, create a ``GalyleoTable`` from the ``galyleo.galyleo_table`` module, load the data into it, create a ``GalyleoClient`` from the ``galyleo.galyleo_client`` module, and then use the ``client.send_data_to_dashboard()`` method to send the data.
+
+``send_data_to_dashboard`` sends data to *open* dashboards in the JupyterLab editor.  Data can be sent to a *specific* dashboard by naming it in the call to ``send_data_to_dashboard``.  Here is a short snippet which sends the cereals data we've used above to a dashboard, assuming the file is in ``cereals.csv``:
+
+::
+
+  from galyleo.galyleo_client import GalyleoClient
+  from galyleo.galyleo_table import GalyleoTable
+  from galyleo.galyleoconstants import GALYLEO_STRING, GALYLEO_NUMBER
+  import csv
+  f = open('cereals.csv', 'r')
+  reader = csv.csv_reader(f)
+  data = [row for row in reader][:1]
+  table = GalyleoTable('cereals')
+  schema = [("name", GALYLEO_STRING), ("mfr",  GALYLEO_STRING), ("type",  GALYLEO_STRING), ("calories",  GALYLEO_NUMBER), ("fiber,  GALYLEO_NUMBER), ("rating",  GALYLEO_NUMBER)]
+  table.load_from_schema_and_data(schema, data)
+  client = GalyleoClient()
+  client.send_data_to_dashboard(table)
+
+Other methods of loading data and schemas can be found in the documentation for the GalyleoTable class.
+
+
 Adding a Filter
 ---------------
+
+Once tables are in the dashboard, filters can be created and edited.  This is done in the Filters tab, found by clicking filters.  Once again, there is an Add button below the lower-right corner of the filter list.  Click this, and a popup is brought up, permitting the user to create a filter.
+
+.. image:: images/filter-create.png
+
+The filter must have a name, which cannot be the name of another filter or chart.  Type this in the input box, and select a widget type from the upper drop-down and a column name from the lower drop-down, then click create. Clicking "Close" closes the dialog without creating a new filter.
+
+Various errors can occur during this process.  In particular, *Range* filters are only valid over numeric columns, and if a mismatched column is selected an error message will appear; the same message appears if a column is not chosen or a widget type is not chosen.  An error will display if a name is not entered, or if the name of another filter or chart is chosen.
+
+Once the filter is created, it appears in the top-left corner of the dashboard.  The Filter is a physical object, and can be manipulated as with any other physical object on the dashboard, using the Halo and Sidebar as described above.  Put the dashboard into selection mode and move the filter as desired.
+
+.. image:: images/filter-edit.png
+
+Clicking on the gear icon beside the name of an existing filter brings up a filter editor, as shown here.  The filter editor is very similar to the filter creator; it simply lacks an input for the filter name.  Choose column and widget, then Apply Changes to update the filter, or Close to close without update.  
+
+Notice the pen icon is at the top right; once again, it is used to switch between inspection and edit modes, and filters are deleted in edit mode just as tables are, and with the same icon.
+
+*Note*: Using the Halo to delete the Filter from the dashboard has the same effect as deleting it from the filter list.
+
 Creating a View
 ---------------
-Drawing a Chart
----------------
-Adding Text, Images, and Shapes
---------------------------------
+
+Creating a View is very similar to creating a Filter, under the Views Tab.  Once again, there is an Add button below the lower-right corner of the views list.  Click this, and a popup is brought up, permitting the user to create a view.
+
+.. image:: images/view-create.png
+
+The view must have a name, which cannot be the name of another view or table.  Type this in the input box, and choose the underlying table from the  drop-down, then click create. Clicking "Close" closes the dialog without creating a new view.
+
+An error will display if a name is not entered, or if the name of another view or table is chosen.
+
+Once a View is created, it is immediately added to the View List, and a View editor is brought up.
+
+.. image:: images/view-edit-1.png
+
+The View Editor is also brought up by clicking on the gear icon beside the name of a View.  It consists of two panels, a Column Chooser and a Filter Chooser.  The Column Chooser chooses the columns for the View, and the Filter Chooser chooses the filters which will be applied to the underlying table to get the rows for the View.  
+
+.. image:: images/view-column-move.png
+
+Since column order is important for a View, there is a column-order mode.  It is toggled by choosing the pen icon above the Columns list.  When it is toggled, the icons beside the column names change to three horizontal bars and the mouse changes to a grab icon.  The columns can then be dragged into order with the mouse.  Note that while all columns are displayed, only the order of selected columns are important.
+
+As with tables and filters, views can be deleted using the pen icon above the view list to switch to edit mode, then deleting views in the same way tables and filters are deleted.
+
+Creating a Chart
+-----------------
+Creating a Chart is very similar to creating a View, under the Charts Tab.  Once again, there is an Add button below the lower-right corner of the chart list.  Click this, and a popup is brought up, permitting the user to create a chart.
+
+.. image:: images/chart-create.png
+
+The chart must have a name, which cannot be the name of another chart or filter.  Type this in the input box, and choose the view or table to use as a data source from the  drop-down, then click create. Clicking "Close" closes the dialog without creating a new chart.
+
+An error will display if a name is not entered, or if the name of another filter or chart is chosen.
+
+Once a chart is created, it is immediately added to the chart List, the chart is brought up as a table on the dashboard, and the Chart Editor pops up.
+
+.. image:: images/chart-edit-1.png
+
+The Chart Editor is also brought up by clicking on the gear icon beside the name of a Chart.  
+
+Once the Chart Editor pops up (it is the standard Google Chart Editor), choose the chart type either from the recommended charts on the start page, or click the Charts tab and then choose the chart type on the charts page.
+
+.. image:: images/chart-edit-2.png
+
+Then click customize and choose chart options.  We recommend that you *not* choose a title for the chart; Galyleo automatically generates a title based on the names of the columns chosen and the values of the filters used to drive the chart.
+
+.. image:: images/chart-edit-3.png
+
+Once you're happy with the chart, click OK
+
+.. image:: images/chart-final.png
+
+*Important note*.  When choosing Line or Area Charts, using the first column as X-axis labels (rather than a data series) must be explicitly chosen by checking "Use 1st Column as Labels" on the Start tab in the editor.
+
+.. image:: images/chart-first-column.png
+
+
+As with tables, filters, and views, charts can be deleted using the pen icon above the chart list to switch to edit mode, then deleting charts in the same way tables, filters and charts are deleted.  And, as with filters, deleting the physical chart with the Halo has the same effect as deleting charts from the chart list.
+
 
