@@ -63,4 +63,5 @@ import sys
 # pull the galyleo client and set the root directory in the environment, e.g.
 # export GALYLEO_CLIENT=/Users/rick/Projects/engageLively/el-galyleo-client
 import os
-sys.path.append(os.environ["GALYLEO_CLIENT"])
+# sys.path.append(os.environ["GALYLEO_CLIENT"])
+sys.path.append('./source')
