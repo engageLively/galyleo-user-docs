@@ -18,7 +18,7 @@ where each dictionary is of the form {<objectNMame>: <structure>}.
 
 Morphic Properties
 ------------------
-All physical objects (filters, charts, text, shapes, and images) have a field ``"morphIndex"`` and a  substructure ``"morphicProperties"``.  The morphIndex gives the z-order of the morph; 0 is the rearmost morph, n the frontmost.  No 
+All physical objects (filters, charts, text, shapes, and images) have a field ``"morphIndex"`` and a  substructure ``"morphicProperties"``.  The morphIndex gives the z-order of the morph; 0 is the frontmost morph, n the rearmost.  No 
 two object should share the same morphIndex; the morphIndex should be a total order on physical objects.
 
 The morphicProperties structure  describes its physical properties.  The fields of the ``"morphicProperties"`` structure are:
@@ -209,7 +209,7 @@ A Chart is also a simple structure.  It has four fields:
 +-------------------+--------+----------------------------------+
 | morphIndex        | number | order of the chart in the scene  |
 +                   +        +                                  +
-|                   |        |  (front to back)                 |
+|                   |        |  (0 = front)                     |
 +-------------------+--------+----------------------------------+
 | morphicProperties | object | see above                        |
 +-------------------+--------+----------------------------------+
