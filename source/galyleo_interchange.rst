@@ -64,7 +64,13 @@ A Coordinate is a structure of the form 'pt(x, y)', where x and y are reals.
 The Clip enum is one of visible, scroll, or auto.  Visible is overflow the bounds, hidden is do not show the overflow, scroll is show scrollbars
 
 
-A border structure is a dictionary with four entries: "top", "bottom", "right", "left".  These specify the properties of the border along each side of the object.  Each field is a structure of the form:
+A border structure is a dictionary with a number of fields.   Each field is a structure of the form
+`{"top": <top>, "bottom": <bottom>, "right": <right>, "left":<left>}`, where <top>, <bottom>, <right>, and <left>
+specify the values for each side of the structure.  For example:
+
+``{ "width": {"top": 2, "bottom": 2, "right": 4, "left": 4}}`` specifies that the width, in pixels, of the top and bottom borders are 2 and the width of the side borders are 4.
+
+The fields are here.  The structure refers to the structure of each of the top, bottom, right, and left components.
 
 
 +--------+--------------+-----------------------------+-----------+--------------------------+
@@ -244,38 +250,42 @@ The Text morph has one additional field:
 
 The text properties are given here:
 
-+--------------+-----------------+------------------------------+
-| Field        | Type            | Role                         |
-+==============+=================+==============================+
-| fontFamily   | string          | Name of the font family      |
-+--------------+-----------------+------------------------------+
-| fontSize     | number          | Size of the font, in pts     |  
-+--------------+-----------------+------------------------------+
-| fontWeight   | enum fontWeight | Weight, fine to bold         |
-+--------------+-----------------+------------------------------+
-| fontStyle    | list of styles  | Weight, fine to bold         |
-+--------------+-----------------+------------------------------+
-| fontColor    | Color Object    | text color                   |
-+--------------+-----------------+------------------------------+
-| padding      | number          | padding between text and     |
-+              +                 +                              +
-|              |                 | bounding box                 |
-+--------------+-----------------+------------------------------+
-| textAlign    | enum alignment  | text alignment               |
-+--------------+-----------------+------------------------------+
-| lineWrapping | boolean         | whether to wrap text         |
-+--------------+-----------------+------------------------------+
-| fixedHeight  | boolean         | if true, bounding box height |
-+              +                 +                              +
-|              |                 | independent of tex           |
-+--------------+-----------------+------------------------------+
-| fixedWidth   |  boolean        | if true, bounding box width  |
-+              +                 +                              +
-|              |                 | indepenent of text           |
-+--------------+-----------------+------------------------------+
-| textString   | string          | the text string itself       |
-+--------------+-----------------+------------------------------+
++----------------+-----------------+------------------------------+
+| Field          | Type            | Role                         |
++================+=================+==============================+
+| fontFamily     | string          | Name of the font family      |
++----------------+-----------------+------------------------------+
+| fontSize       | number          | Size of the font, in pts     |  
++----------------+-----------------+------------------------------+
+| fontWeight     | enum fontWeight | Weight, fine to bold         |
++----------------+-----------------+------------------------------+
+| fontStyle      | list of styles  | Weight, fine to bold         |
++----------------+-----------------+------------------------------+
+| fontColor      | Color Object    | text color                   |
++----------------+-----------------+------------------------------+
+| padding        | number          | padding between text and     |
++                +                 +                              +
+|                |                 | bounding box                 |
++----------------+-----------------+------------------------------+
+| textAlign      | enum alignment  | text alignment               |
++----------------+-----------------+------------------------------+
+| textDecoration | enum decoration | underlined or not            |
++----------------+-----------------+------------------------------+
+| lineWrapping   | enum wrapping   | whether to wrap text         |
++----------------+-----------------+------------------------------+
+| fixedHeight    | boolean         | if true, bounding box height |
++                +                 +                              +
+|                |                 | independent of tex           |
++----------------+-----------------+------------------------------+
+| fixedWidth     |  boolean        | if true, bounding box width  |
++                +                 +                              +
+|                |                 | independent of text          |
++----------------+-----------------+------------------------------+
+| textString     | string          | the text string itself       |
++----------------+-----------------+------------------------------+
 
-A fontWeight is one of "Fine", "Medium", "Bold", "Extra Bold"
-Alignment is one of "center", "left", "right", "justified"
-Font style is a list chosen from "normal", "italic", "underline"
+- A fontWeight is one of "Fine", "Medium", "Bold", "Extra Bold"
+- textAlign is one of "center", "left", "right", "justified"
+- fontStyle is one of  "normal", "italic", "oblique"
+- textDecoration is one of "underline" or "none"
+- linewrapping is one of "by words", "anywhere", "only by words", "none"
