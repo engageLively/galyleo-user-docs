@@ -63,7 +63,7 @@ The *Borders* configurer, below  the shape configurer, offers the user the abili
 
 The *Text* controller only appears when a Text item is selected, and it is used to control the textual properties of a text object.  These are:
 
-- The font family and weigt (fine to extra-bold)
+- The font family and weight (fine to extra-bold)
 - The font style (bold, italic, underline, hyperlink)
 - The font size and color
 - Alignment

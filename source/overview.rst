@@ -33,7 +33,7 @@ Frequently Asked Questions
 
 2. Can I use Galyleo with a Notebook using an R, Julia, or  other kernel, or must I use Python?
 
-The connection between the dashoard and the kernel is given by the Galyleo client, which is currently a Python module.  So if the kernel can use Python modules, it can be used today.  The Galyleo module is very simple, so we expect to implement it in other languages.  Of course, it is also open-source, and the protocol is documented; so others are free to implement this as well.
+The connection between the dashboard and the kernel is given by the Galyleo client, which is currently a Python module.  So if the kernel can use Python modules, it can be used today.  The Galyleo module is very simple, so we expect to implement it in other languages.  Of course, it is also open-source, and the protocol is documented; so others are free to implement this as well.
 
 3. Can I use other editors besides the Galyleo editor to edit my dashboard?
 
