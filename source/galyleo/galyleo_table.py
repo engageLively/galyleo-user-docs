@@ -48,6 +48,7 @@ class GalyleoTable:
     converted to a Google Visualization Data Table on either the Python or the JavaScript side.
     Convenience routines provided here to import data from pandas, and json format.
     '''
+
     def __init__(self, name:str):
         """
         The DashboardTable Class. Sets the schema and data to be empty, and the name to be name
@@ -77,6 +78,7 @@ class GalyleoTable:
            True if equal, False otherwise
         
         """
+        
         if (len(self.schema) != len(table.schema)):
             return False
         if (len(self.data) != len(table.data)):
