@@ -23,17 +23,6 @@ License
 
 ``galyleo`` is released under a standard BSD 3-Clause licence by engageLively
 
-Galyleo Table
---------------
-
-.. automodule:: galyleo.galyleo_table
-   :members:
-
-
-JupyterLab Client
------------------
-.. automodule:: galyleo.galyleo_jupyterlab_client
-   :members:
 
 Galyleo Exceptions
 ------------------
@@ -43,4 +32,14 @@ Galyleo Exceptions
 Galyleo Constants
 ------------------
 .. automodule:: galyleo.galyleo_constants
+   :members:
+
+Galyleo Table
+--------------
+.. automodule:: galyleo.galyleo_table
+   :members:
+
+JupyterLab Client
+-----------------
+.. automodule:: galyleo.galyleo_jupyterlab_client
    :members:
