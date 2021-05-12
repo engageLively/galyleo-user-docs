@@ -33,6 +33,7 @@ from galyleo.galyleo_table import GalyleoTable
 from galyleo.galyleo_exceptions import DataSizeExceeded
 from galyleo.galyleo_constants import MAX_DATA_SIZE, MAX_TABLE_ROWS
 
+""" Module for communicating between the kernel and the dashboard, through the standard 0MQ mechanism"""
 
 
 class GalyleoClient:
