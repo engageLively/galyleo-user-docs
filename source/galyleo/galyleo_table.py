@@ -28,6 +28,7 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+"""Foo!"""
 
 
 import gviz_api
@@ -78,7 +79,7 @@ class GalyleoTable:
            True if equal, False otherwise
         
         """
-        
+
         if (len(self.schema) != len(table.schema)):
             return False
         if (len(self.data) != len(table.data)):
