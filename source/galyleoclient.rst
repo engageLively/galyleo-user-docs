@@ -7,6 +7,8 @@ The Galyleo Python client is a module designed to convert Python structures into
 - galyleo.galyleo_jupyterlab_client: classes and methods to send Galyleo Tables to Galyleo dashboards runniung under JupyterLab clients
 - galyleo.galyleo_constants: Symbolic constants used by these packages and the code which uses them
 - galyleo.galyleo_exceptions; Exceptions thrown by the package
+
+Test 2
   
 Installation
 ------------
