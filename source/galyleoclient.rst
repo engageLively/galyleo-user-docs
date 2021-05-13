@@ -7,8 +7,6 @@ The Galyleo Python client is a module designed to convert Python structures into
 - galyleo.galyleo_jupyterlab_client: classes and methods to send Galyleo Tables to Galyleo dashboards runniung under JupyterLab clients
 - galyleo.galyleo_constants: Symbolic constants used by these packages and the code which uses them
 - galyleo.galyleo_exceptions; Exceptions thrown by the package
-
-Test 2
   
 Installation
 ------------
@@ -35,32 +33,8 @@ Galyleo Table
 JupyterLab Client
 -----------------
 
-*class* **GalyleoClient**                                                      
-
-The Dashboard Client.  This is the client which sends the tables to the  dashboard and handles requests coming from the dashboard for tables.     
-
-method **GalyleoClient.__init__()**
-
-Initialize the client.  No parameters.  This initializes communications with the JupyterLab Galyleo Communications Manager 
-
-**GalyleoClient.send_data_to_dashboard(galyleo_table, dashboard_name:str = None)**
-
-The routine to send a GalyleoTable to the dashboard, optionally specifying a specific 
-dashboard to send the data to.  If None is specified, sends to all the dashboards.
-The table must not have more than galyleo_constants.MAX_NUMBER_ROWS, nor be (in JSON form) > galyleo_constants.MAX_DATA_SIZE. 
-
-If either of these conditions apply, a DataSizeExceeded exception is thrown.
-NOTE: this sends data to one or more open dashboard editors in JupyterLab.  If there are no dashboard editors open, it will have no effect.
-
-*Args:*
-- galyleo_table: the table to send to the dashboard
-- dashboard_name: name of the dashboard editor to send it to (if None, sent to all)
-  
-*Returns:*
-- None
-
-*Raises:*
-- galyleo_exceptions.DataSizeExceeded
+.. automodule:: galyleo.galyleo_jupyterlab_client
+   :members:
 
 Galyleo Exceptions
 ------------------

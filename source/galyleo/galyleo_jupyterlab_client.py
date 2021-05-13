@@ -28,10 +28,10 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from ipykernel.comm import Comm
-from galyleo.galyleo_table import GalyleoTable
-from galyleo.galyleo_exceptions import DataSizeExceeded
-from galyleo.galyleo_constants import MAX_DATA_SIZE, MAX_TABLE_ROWS
+# from ipykernel.comm import Comm
+# from galyleo.galyleo_table import GalyleoTable
+# from galyleo.galyleo_exceptions import DataSizeExceeded
+# from galyleo.galyleo_constants import MAX_DATA_SIZE, MAX_TABLE_ROWS
 
 """ Module for communicating between the kernel and the dashboard, through the standard 0MQ mechanism"""
 

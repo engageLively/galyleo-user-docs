@@ -18,7 +18,7 @@ Galileo, of course, was the inventor of the telescope and the person who first s
 Tutorials and Demos
 -------------------
 
-A number of tutorial and example projects can be found at `Galyleo Examples:<https://github.com/engageLively/galyleo-examples>`_.
+A number of tutorial and example projects can be found at: `Galyleo Examples <https://github.com/engageLively/galyleo-examples>`_.
 
 
 Reporting an issue
