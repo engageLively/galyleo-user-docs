@@ -5,7 +5,7 @@ GETTING STARTED
 Overview
 ========
 
-Galyleo is a package  for the  drag-and-drop  design and publication of  interactive dashboards driven by Jupyter Notebooks.  It is available as an extension to JupyterLab, and is also available for other Jupyter enviroments or other programs.  A similar dashboard can be found here: .. _elections: https://editor.engagelively.com/lively.freezer/frozenParts/rick/US_Presidential_Election/index.html/.
+Galyleo is a package  for the  drag-and-drop  design and publication of  interactive dashboards driven by Jupyter Notebooks.  It is available as an extension to JupyterLab, and is also available for other Jupyter enviroments or other programs.  A similar dashboard can be found here: `elections <https://editor.engagelively.com/lively.freezer/frozenParts/rick/US_Presidential_Election/index.html/>`_.
 
 This dashboard is designed entirely in Galyleo:
 
@@ -18,7 +18,7 @@ Galileo, of course, was the inventor of the telescope and the person who first s
 Tutorials and Demos
 -------------------
 
-A number of tutorial and example projects can be found at _Galyleo Examples: https://github.com/engageLively/galyleo_examples.
+A number of tutorial and example projects can be found at `Galyleo Examples:<https://github.com/engageLively/galyleo-examples>`_.
 
 
 Reporting an issue
@@ -41,7 +41,7 @@ The connection between the dashboard and the kernel is given by the Galyleo clie
 
 4. What's the underlying technology for the editor?
    
-The underlying technology  is lively.next, an MIT-licensed environment for developing broser-hosted graphical, interactive applications.  You can find its repo here: _Lively Next: https://github.com/LivelyKernel/lively.next
+The underlying technology  is lively.next, an MIT-licensed environment for developing broser-hosted graphical, interactive applications.  You can find its repo here: `Lively Next: <https://github.com/LivelyKernel/lively.next>`_
 
 5. Can I publish my dashboards to the web, or on my local intranet?
    
