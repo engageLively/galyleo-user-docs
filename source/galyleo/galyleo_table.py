@@ -28,13 +28,13 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# import gviz_api
-# import pandas as pd
-# from galyleo.galyleo_constants import GALYLEO_SCHEMA_TYPES
-# import numpy
-# from galyleo.galyleo_constants import GALYLEO_STRING, GALYLEO_NUMBER, GALYLEO_BOOLEAN, GALYLEO_DATE, GALYLEO_DATETIME, GALYLEO_TIME_OF_DAY
-# from json import loads, dumps, JSONDecodeError
-# from galyleo.galyleo_exceptions import InvalidDataException
+import gviz_api
+import pandas as pd
+from galyleo.galyleo_constants import GALYLEO_SCHEMA_TYPES
+import numpy
+from galyleo.galyleo_constants import GALYLEO_STRING, GALYLEO_NUMBER, GALYLEO_BOOLEAN, GALYLEO_DATE, GALYLEO_DATETIME, GALYLEO_TIME_OF_DAY
+from json import loads, dumps, JSONDecodeError
+from galyleo.galyleo_exceptions import InvalidDataException
 
 """ Code to form, load, and perform I/O on GalyleoTables """
 
