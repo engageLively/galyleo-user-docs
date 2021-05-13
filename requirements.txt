@@ -11,4 +11,3 @@ ipykernel
 gviz_api
 pandas
 numpy
-json
