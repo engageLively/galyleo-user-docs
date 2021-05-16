@@ -1,3 +1,7 @@
+.. image :: images/galyleo-logo.png
+   :width: 100
+
+
 The Galyleo Python Client
 =========================
 

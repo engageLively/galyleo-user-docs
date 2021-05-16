@@ -1,3 +1,7 @@
+.. image :: images/galyleo-logo.png
+   :width: 100
+
+
 The Galyleo Interchange Format
 ==============================
 The Galyleo Interchange Format is the wire protocol between the galyleo module and a  dashboard and the disk format of a Galyleo Dashboard file.  The extension of the file is .gd.json

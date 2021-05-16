@@ -65,3 +65,9 @@ import sys
 import os
 # sys.path.append(os.environ["GALYLEO_CLIENT"])
 sys.path.append('./source')
+
+# Use engageLively orange
+
+html_theme_options = {
+    'style_nav_header_background': '#f87c04'
+}

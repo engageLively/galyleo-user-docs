@@ -1,3 +1,6 @@
+.. image :: images/galyleo-logo.png
+   :width: 100
+
 ###############
 GETTING STARTED
 ###############
