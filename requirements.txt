@@ -11,4 +11,4 @@ ipykernel
 gviz_api
 pandas
 numpy
-galyleo --index-url https://pypi.engagelively.com
+--extra-index-url https://pypi.engagelively.com galyleo 
