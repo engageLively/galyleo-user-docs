@@ -34,7 +34,8 @@ import sphinx_rtd_theme
 # ones.
 extensions = [
     "sphinx_rtd_theme",
-    "sphinx.ext.autodoc"
+    "sphinx.ext.autodoc",
+    "rst2pdf.pdfbuilder"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -71,3 +72,7 @@ sys.path.append('./source')
 html_theme_options = {
     'style_nav_header_background': '#f87c04'
 }
+
+pdf_documents = [('index', 'index.pdf', 'Galyleo User Guide', 'Andreas Bergen, Mahdi Biazi, Matt Hemmings, Rick McGeer, Robin Schreiber')]
+
+pdf_stylesheets = ['twocolumn']
