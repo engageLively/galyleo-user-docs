@@ -48,7 +48,7 @@ The underlying technology  is lively.next, an MIT-licensed environment for devel
 
 5. Can I publish my dashboards to the web, or on my local intranet?
    
-We've developed, and are in beta, with  a web application which  takes the URL for a Galyleo Dashboard document as the  parameter dashboard and renders the document in the browser.  The page is at https://galyleobeta.engageLively.com/galyleo/index.html.  That page can be served from any convenient web server, on the web or on an intranet.    So publication is as easy as storing the dashboard file on any resource that has an URL (e.g., in a github repo, or for that matter Google Drive with the appropriate permissions).
+We've developed, and are in beta, with  a web application which  takes the URL for a Galyleo Dashboard document as the  parameter dashboard and renders the document in the browser.  The page is at https://galyleobeta.engageLively.com/public/galyleo/index.html.  That page can be served from any convenient web server, on the web or on an intranet.    So publication is as easy as storing the dashboard file on any resource that has an URL (e.g., in a github repo, or for that matter Google Drive with the appropriate permissions).
 
 Following that, on our roadmap is a feature which will drop a complete web page as a directory into your JupyterLab directory, and from there you can export it to any convenient web page.
 
