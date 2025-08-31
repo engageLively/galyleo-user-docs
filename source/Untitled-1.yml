@@ -1,0 +1,20 @@
+source/
+|-- index.rst
+|-- dashboard_editor/
+|   |-- overview.rst
+|   |-- top_bar.rst
+|   |-- halo.rst
+|   |-- context_menu.rst
+|-- data_architecture/
+|   |-- Galyleo and the Simple Data Transfer Protocol
+|   |-- tables.rst
+|   |-- filters.rst
+|   |-- views.rst
+|   |-- charts.rst
+|-- usage/
+|   |-- adding_tables.rst
+|   |-- adding_filters.rst
+|   |-- creating_views.rst
+|   |-- creating_charts.rst
+|   |-- images_shapes_text.rst
+|   |-- publishing_dashboards.rst
