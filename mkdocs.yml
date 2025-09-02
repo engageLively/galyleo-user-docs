@@ -1,0 +1,32 @@
+site_name: Galyleo User Guide
+theme:
+  name: material
+watch:
+  - 'docs'
+  - 'mkdocs.yml'
+nav:
+  - 'Overview': 'index.md'
+  - 'Galyleo UI':
+    - 'UI Overview': 'galyleo_ui/overview.md'
+    - 'Top Bar': 'galyleo_ui/top_bar.md'
+    - 'Halo and Side Bar': 'galyleo_ui/halo_sidebar.md'
+    - 'Context Menu': 'galyleo_ui/context_menu.md'
+  - 'Data Architecture':
+    - 'Data Overview': 'data_architecture/overview.md'
+    - 'SDTP': 'data_architecture/galyleo_and_sdtp.md'
+    - 'Tables': 'data_architecture/tables.md'
+    - 'Filters': 'data_architecture/filters.md'
+    - 'Views': 'data_architecture/views.md'
+    - 'Charts': 'data_architecture/charts.md'
+  - 'Using Galyleo':
+    - 'Overview': 'using_galyleo/overview.md'
+    - 'Publishing a Table': 'using_galyleo/tables.md'
+    - 'Adding a Filter': 'using_galyleo/adding_filters.md'
+    - 'Creating a View': 'using_galyleo/creating_views.md'
+    - 'Creating a Chart': 'using_galyleo/creating_charts.md'
+  - 'Galyleo Service':
+    - 'Galyleo Service Overview': 'service/overview.md'
+    - 'The Galyleo Service Web UI': 'service/web_ui.md'
+    - 'The Galyleo Service API': 'service/api_overview.md'
+    - 'Authentication': 'service/authentication.md'
+    - 'How Items are Accessed, Shared, and Published': 'service/access.md'
