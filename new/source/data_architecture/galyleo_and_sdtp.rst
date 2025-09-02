@@ -1,0 +1,8 @@
+Galyleo and the Simple Data Transfer Protocol
+----------------------------------------------
+
+Galyleo dashboards use Simple Data Markup Language (SDML) tables as their data source. SDML  provides a standardized, machine-friendly format for representing tabular data. Conceptually, an SDML table is like a Pandas DataFrame or SQL table: a fixed schema with rows of consistently typed values. These tables are designed to be dynamic and interoperable—whether generated on demand, linked from CSVs or spreadsheets, or fetched from remote services.
+
+Unlike earlier Galyleo-specific formats, SDML tables generalize and extend the structure and semantics of data handling. Column types are labeled with the prefix SDML_ (e.g., SDML_String, SDML_Number) to indicate their schema-driven nature. Tables may be local, embedded directly as RowTables, or remote, queried through endpoints using the Simple Data Transfer Protocol (SDTP). This allows Galyleo to support scalable, decoupled data publishing across heterogeneous backends.
+
+To support this architecture, Galyleo includes a hosted SDML table service. Users working in Jupyter Notebooks or other environments can generate tables in SDML format and publish them to the service. Dashboards can then query those tables over SDTP with minimal configuration, ensuring that data flow is cleanly separated from visualization logic. For most users, the data “just appears” in the dashboard editor—automatically loaded and ready to filter, view, and chart.

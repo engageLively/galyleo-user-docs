@@ -1,0 +1,3 @@
+# The Galyleo User Interface
+
+The Galyleo User interface consists of three components: the top bar, the side bar, and the Halo and Context Menu.  We discuss each of these in turn.  The mission of the Top Bar is to switch between global modes (interacting and selecting) and added non-chart elements (shapes, images, and text) to the dashboard.  The Halo and Side Bar is where individual objects are positioned and configured: where shape and text properties are set, borders defined, and images chosen.  The  Halo   permits the copying, deletion, resizing, and rotation rotation,  of objects front-to-back.  The Context Menu, brought up by a right-click on the object, permits its reordering.
