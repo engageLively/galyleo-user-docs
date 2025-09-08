@@ -30,3 +30,5 @@ nav:
     - 'The Galyleo Service API': 'service/api_overview.md'
     - 'Authentication': 'service/authentication.md'
     - 'How Items are Accessed, Shared, and Published': 'service/access.md'
+  - 'Galyleo Admin':
+    - 'Galyleo Administrator Guide': 'admin/admin.md'
