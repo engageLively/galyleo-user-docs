@@ -6,6 +6,7 @@ The Halo and the Side Bar are used to configure an object when it's created, and
 
 
 The Halo shows control points and tools around the selected object.  The eight control points in the inner halo are used to change the width and height of the object.  The tool in the bottom-left corner is used to rotate the object.  The cross on the top bar is used to move it.  The trash can on the top right is used to delete the object.
+![halo](images/halo.png)
 
 The Side bar consists of two parts.  The top one, which we'll return to later, manages Tables, Filters, Views, and Charts.  The bottom part is used to configure objects.  It has multiple sections, each activated by clicking on the chevron next to the name.
 

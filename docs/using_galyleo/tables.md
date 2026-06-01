@@ -104,7 +104,6 @@ Choose a file and then click Upload.  You will be returned to the Table Viewer i
 ### Using the API
 The Galyleo Service method `publish_data` accepts an SDML table in JSON form.  In order to use it, create the table using the SDTP library and then get its JSON form:
 ```
-
 schema = [
   {"name": "name", "type": "string"},
   {"name": "mfr", "type": "string"},
