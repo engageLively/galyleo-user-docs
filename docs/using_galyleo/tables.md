@@ -1,7 +1,7 @@
 ## Creating a Table
-This begins with publishing a data table to the Galyleo service.  Construction of a table is done  using the Simple Data Markup Language (SDML), which is thoroughly documented at [Simple Data Transfer Protocol](https://global-data-plane.github.io/sdtp/build/html/index.html).
+This begins with publishing a data table to the Galyleo service.  Construction of a table is done  using the Simple Data Markup Language (SDML), which is thoroughly documented at [Simple Data Transfer Protocol](https://global-data-plane.github.io/sdtp).
 
-The common case to start is with a `RowTable`.  A `RowTable` is just an SDML Table with the rows explicitly represented in the table  We start with the table from the last section:
+The common case to start is with a `RowTable`.  A `RowTable` is just an SDML Table with the rows explicitly represented in the table.  We start with the table from the last section:
 
 name | mfr | type | calories | fiber | rating |
 -----|-----|-----|-----|-----|-----|
@@ -84,27 +84,26 @@ The markup form of the table is then, in JSON:
 }
 ```
 
-Tables can be created through the sdtp library, included with every Galyleo shipment, or by assmebling the components and saving them as an SDML file to disk.
+Tables can be created through the sdtp library, included with every Galyleo shipment, or by assembling the components and saving them as an SDML file to disk.
 
 ## Publishing a Table
 A table can be published either through the Galyleo Service Web UI or using the Galyleo Service REST API.
 
 ### Using the Galyleo Service Web UI
-Click on the Galyleo menu on Jupyter Lab.  This will bring up the Galyleo Services tab
+Click on the Galyleo menu on Jupyter Lab.  This will bring up the Galyleo Services tab:
 
-![Galyleo Service] (images/service.png)
+![Galyleo Service](images/service.png)
 
 Click on Upload Table.  This will bring up a table uploader:
 
 ![Galyleo Upload] (images/upload.png)
 Choose a file and then click Upload.  You will be returned to the Table Viewer in the service, where you will see your uploaded table:
 
-![Galyleo Tables] (images/tables.png)
+![Galyleo Tables](images/tables.png)
 
 ### Using the API
 The Galyleo Service method `publish_data` accepts an SDML table in JSON form.  In order to use it, create the table using the SDTP library and then get its JSON form:
 ```
-
 schema = [
   {"name": "name", "type": "string"},
   {"name": "mfr", "type": "string"},

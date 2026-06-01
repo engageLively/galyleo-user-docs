@@ -25,7 +25,7 @@ Bundled in the examples repository is a set of tutorials, which walk the user th
 
 1. **create-table**: learn how to create a Galyleo Table from a CSV file or PANDAS frame
 
-2. **load-table**: learn how to send the created table to a Dashboard
+2. **publish-table**: Publish a table so it can be used in a dashboard.
 
 3. **filter-table**: learn how to filter the columns of a table by value or range
 
@@ -36,6 +36,8 @@ Bundled in the examples repository is a set of tutorials, which walk the user th
 6. **use-chart-as-filter**: Every chart is also a filter; use this to do data drill-downs
 
 7. **add-images-text-and-shapes**: Add images, text, and shapes, and style them
+
+
 
 ### The Data Service
 A full introduction to the data service Galyleo uses can be found here: [Global Data Plane](https://global-data-plane.github.io/sdtp/).
