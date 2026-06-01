@@ -5,11 +5,11 @@ The Halo and the Side Bar are used to configure an object when it's created, and
 ![side-bar](images/side-bar.png)
 
 
-The Halo shows control points and tools around the selected object.  The eight control points in the inner halo are used to change the width and height of the object.  The tool in the bottom-left corner is used to rotate the object.  The cross on the top bar is used to move it.  The trash can on the bottom left is used to delete the object.
+The Halo shows control points and tools around the selected object.  The eight control points in the inner halo are used to change the width and height of the object.  The tool in the bottom-left corner is used to rotate the object.  The cross on the top bar is used to move it.  The trash can on the top right is used to delete the object.
 
-The Side bar consists of two parts.  The top one, which we'll return to later, manages Tables, Filters, Views, and Charts.  The bottom part is used to configure objects.  It has three sections, each activated by clicking on the chevron next to the name.
+The Side bar consists of two parts.  The top one, which we'll return to later, manages Tables, Filters, Views, and Charts.  The bottom part is used to configure objects.  It has multiple sections, each activated by clicking on the chevron next to the name.
 
-The *Shape* configurer is shown in the image, with its  components shown.  They are used to configure the fill (color) and opacity of the object, as well as whether the object casts a drop shadow. 
+The *Shape* configurer is shown in the image, with its  components shown.  They are used to configure the fill (color) and opacity of the object, and other effects such  as whether the object casts a drop shadow. 
 
 ![color chooser](images/color_chooser.png)
 

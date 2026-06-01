@@ -29,4 +29,4 @@ Once you're happy with the chart, click OK
 ![Chart First Column](images/chart-first-column.png)
 
 
-As with tables, filters, and views, charts can be deleted using the pen icon above the chart list to switch to edit mode, then deleting charts in the same way tables, filters and charts are deleted.  And, as with filters, deleting the physical chart with the Halo has the same effect as deleting charts from the chart list.
+As with tables, filters, and views, charts can be deleted using the pen icon above the chart list to switch to edit mode, then deleting charts in the same way tables, filters and views are deleted. 
