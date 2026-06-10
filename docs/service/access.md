@@ -31,7 +31,7 @@ Clicking the "Remove" button beside a user's name stops sharing the table with t
 
 ![Share Table](images/share-table-2.png)
 
-`Save Changes` updates the share list; clicking `Cancel` leaves the share list unchanged.
+"Save Changes" updates the share list; clicking "Cancel" leaves the share list unchanged.
 
 #### Sharing  Through the API
 An item is shared in the API at the time it is published, either through the `publish` method for dashboards or the `publish_data` method for tables.  An optional parameter to the body payload, `share_list`, is the list of users with whom the item should be shared.  Consider the example:
