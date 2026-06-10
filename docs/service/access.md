@@ -19,7 +19,7 @@ Users can access items that they own or that have been shared with them, either 
 By default, when an item is uploaded to the service either through the manual upload  or through the API methods `publish` and `publish_data`, the item is private to the item's owner.  It can be explicitly shared with other users either through the Web UI or through an API call.
 
 #### Sharing Through the Web UI
-Clicking the "Share"s Button beside an item brings up a share screen: 
+Clicking the "Share" Button beside an item brings up a share screen: 
 
 ![Share Table](images/share-table.png)
 
