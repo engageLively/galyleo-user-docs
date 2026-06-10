@@ -142,12 +142,12 @@ class GalyleoTable:
         self.data = data # should I clone?
 
     #
-    # An internal routine used to map a Pandas or Numpy type to a Galyleo
+    # An internal routine used to map a PANDAS or Numpy type to a Galyleo
     # type: mostly this involves mapping one of Numpy's many number types
     # to GALYLEO_NUMBER.  Used by load_from_dataframe.  If a type is unrecognized
     # it maps to GALYLEO_STRING
     # parameters:
-    #   dtype: a Numpy or Pandas primitive type
+    #   dtype: a Numpy or PANDAS primitive type
     # returns: a Galyleo type
     #
 
@@ -163,7 +163,7 @@ class GalyleoTable:
 
     def load_from_dataframe(self, dataframe, schema = None):
         """    
-        Load from a Pandas Dataframe.  The schema is given in the optional second parameter,
+        Load from a PANDAS Dataframe.  The schema is given in the optional second parameter,
         as a list of records {"name": <name>, "type": <type>}, where type is a Galyleo type. (GALYLEO_STRING, GALYLEO_NUMBER, GALYLEO_BOOLEAN,
         GALYLEO_DATE, GALYLEO_DATETIME, GALYLEO_TIME_OF_DAY). 
         If the second parameter is not present, the schema is derived from the name and

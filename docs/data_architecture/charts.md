@@ -1,13 +1,13 @@
 ## Charts
-Charts are, well, charts.  Each chart takes its input data from a View or a Table.  The category, or X axis (place on geocharts, X axis on column charts or line charts, Y axis on bar charts, wedge labels on donut or pie charts) is the first column in the view or table.  This is why an important part of constructing a view is reoordering columns.
+Charts are, well, charts.  Each chart takes its input data from a View or a Table.  The category, or X axis (place on geocharts, X axis on column charts or line charts, Y axis on bar charts, wedge labels on donut or pie charts) is the first column in the view or table.  This is why an important part of constructing a view is reordering columns.
 The current set of Chart types supported by Galyleo are Google Charts; however, we intend to extend these chart types in the near future, to include OpenLayers, Leaflet.js, Chart.js, Cytoscape.js, and others.   It is the intent of the Galyleo system that *any* JavaScript/HTML5-hosted charts be available under Galyleo.
 
 ### Charts as Filters
 
-One common operation in Dashboards is to use Charts as filters.  This enables drill-down and detail operations on particular categories.  Consider, the Presidential Election database example; when we click on a state, we see the vote for that state for the chosen year and the voting history for that state.
+One common operation in Dashboards is to use Charts as filters.  This enables drill-down and detail operations on particular categories.  Consider the Presidential Election database example: when we click on a state, we see the vote for that state for the chosen year and the voting history for that state.
 In this case, the chart is being used as a filter; it selects  the state in the vote-history and vote-detail charts.
 This is such a common use case that it is made a feature in Galyleo: every chart is a filter.  Specifically, it is a select filter on the category column of the View or Table that is input to the chart.  As we'll see below, charts show up in the same UI sections as filters.
-![charts-as-filters]{images/charts_as_filters.png}
+![charts-as-filters](images/charts_as_filters.png)
 
 ### Names and Namespaces
 

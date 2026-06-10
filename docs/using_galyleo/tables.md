@@ -84,7 +84,7 @@ The markup form of the table is then, in JSON:
 }
 ```
 
-Tables can be created through the sdtp library, included with every Galyleo shipment, or by assembling the components and saving them as an SDML file to disk.
+Tables can be created through the SDTP library, included with every Galyleo shipment, or by assembling the components and saving them as an SDML file to disk.
 
 ## Publishing a Table
 A table can be published either through the Galyleo Service Web UI or using the Galyleo Service REST API.
@@ -97,6 +97,7 @@ Click on the Galyleo menu on Jupyter Lab.  This will bring up the Galyleo Servic
 Click on Upload Table.  This will bring up a table uploader:
 
 ![Galyleo Upload] (images/upload.png)
+
 Choose a file and then click Upload.  You will be returned to the Table Viewer in the service, where you will see your uploaded table:
 
 ![Galyleo Tables](images/tables.png)
