@@ -238,7 +238,7 @@ Every element of the Table UI is present for all classes of element, (Tables, Fi
 
 Sending Tables to the Dashboard
 --------------------------------
-The anticipated method of loading a table is to send it from a Notebook.  The Galyleo Client document has a detailed description of how to do that.  The brief version is to collect the data in a tabular forma, either a list of lists or a Pandas dataframe, create a ``GalyleoTable`` from the ``galyleo.galyleo_table`` module, load the data into it, create a ``GalyleoClient`` from the ``galyleo.galyleo_client`` module, and then use the ``client.send_data_to_dashboard()`` method to send the data.
+The anticipated method of loading a table is to send it from a Notebook.  The Galyleo Client document has a detailed description of how to do that.  The brief version is to collect the data in a tabular forma, either a list of lists or a PANDAS dataframe, create a ``GalyleoTable`` from the ``galyleo.galyleo_table`` module, load the data into it, create a ``GalyleoClient`` from the ``galyleo.galyleo_client`` module, and then use the ``client.send_data_to_dashboard()`` method to send the data.
 
 ``send_data_to_dashboard`` sends data to *open* dashboards in the JupyterLab editor.  Data can be sent to a *specific* dashboard by naming it in the call to ``send_data_to_dashboard``.  Here is a short snippet which sends the cereals data we've used above to a dashboard, assuming the file is in ``cereals.csv``:
 

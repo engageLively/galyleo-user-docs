@@ -1,5 +1,5 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+%ï¿½ï¿½ï¿½ï¿½ ReportLab Generated PDF document http://www.reportlab.com
 1 0 obj
 <<
 /F1 2 0 R /F2 5 0 R /F3 15 0 R /F4 28 0 R /F5 33 0 R
@@ -3040,7 +3040,7 @@ Q
 q
 1 0 0 1 57.02362 684.0236 cm
 q
-BT 1 0 0 1 0 50 Tm .315176 Tw 12 TL /F1 10 Tf 0 0 0 rg (The anticipated method of loading a table is to send it from a Notebook. The Galyleo Client document has a) Tj T* 0 Tw .070379 Tw (detailed description of how to do that. The brief version is to collect the data in a tabular forma, either a list of) Tj T* 0 Tw 1.230696 Tw (lists or a Pandas dataframe, create a ) Tj /F4 10 Tf (GalyleoTable) Tj /F1 10 Tf ( from the ) Tj /F4 10 Tf (galyleo.galyleo_table) Tj /F1 10 Tf ( module, load) Tj T* 0 Tw .433453 Tw (the data into it, create a ) Tj /F4 10 Tf (GalyleoClient) Tj /F1 10 Tf ( from the ) Tj /F4 10 Tf (galyleo.galyleo_client) Tj /F1 10 Tf ( module, and then use the) Tj T* 0 Tw /F4 10 Tf (client.send_data_to_dashboard\(\)) Tj /F1 10 Tf ( method to send the data.) Tj T* ET
+BT 1 0 0 1 0 50 Tm .315176 Tw 12 TL /F1 10 Tf 0 0 0 rg (The anticipated method of loading a table is to send it from a Notebook. The Galyleo Client document has a) Tj T* 0 Tw .070379 Tw (detailed description of how to do that. The brief version is to collect the data in a tabular forma, either a list of) Tj T* 0 Tw 1.230696 Tw (lists or a PANDAS dataframe, create a ) Tj /F4 10 Tf (GalyleoTable) Tj /F1 10 Tf ( from the ) Tj /F4 10 Tf (galyleo.galyleo_table) Tj /F1 10 Tf ( module, load) Tj T* 0 Tw .433453 Tw (the data into it, create a ) Tj /F4 10 Tf (GalyleoClient) Tj /F1 10 Tf ( from the ) Tj /F4 10 Tf (galyleo.galyleo_client) Tj /F1 10 Tf ( module, and then use the) Tj T* 0 Tw /F4 10 Tf (client.send_data_to_dashboard\(\)) Tj /F1 10 Tf ( method to send the data.) Tj T* ET
 Q
 Q
 q

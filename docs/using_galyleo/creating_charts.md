@@ -1,13 +1,13 @@
 ## Creating a Chart
 
-Creating a Chart is very similar to creating a View, under the Charts Tab.  Once again, there is an Add button below the lower-right corner of the chart list.  Click this, and a popup is brought up, permitting the user to create a chart.
+Creating a Chart is very similar to creating a View, under the Charts tab.  Once again, there is an Add button below the lower-right corner of the chart list.  Click this, and a popup is brought up, permitting the user to create a chart.
 ![Create Chart](images/chart-create.png)
 
-The chart must have a name, which cannot be the name of another chart or filter.  Type this in the input box, and choose the view or table to use as a data source from the  drop-down, then click create. Clicking "Close" closes the dialog without creating a new chart.
-
+The chart must have a name, which cannot be the name of another chart or filter.  Type this in the input box, and choose the view or table to use as a data source from the  drop-down, then click "Create". Clicking "Close" closes the dialog without creating a new chart.
+s
 An error will display if a name is not entered, or if the name of another filter or chart is chosen.
 
-Once a chart is created, it is immediately added to the chart List, the chart is brought up as a table on the dashboard, and the Chart Editor pops up.
+Once a chart is created, it is immediately added to the chart list, the chart is brought up as a table on the dashboard, and the Chart Editor pops up.
 ![Edit  Chart 1](images/chart-edit-1.png)
 
 
@@ -21,7 +21,7 @@ Then click customize and choose chart options.  We recommend that you *not* choo
 
 
 
-Once you're happy with the chart, click OK
+Once you're happy with the chart, click OK.
 ![Chart Final](images/chart-final.png)
 
 

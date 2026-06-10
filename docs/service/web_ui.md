@@ -13,7 +13,7 @@ Clicking on the Delete Dashboard button will delete the corresponding dashboard,
 
 ![Dashboard Delete Page](images/delete-dashboard.png)
 
-### Upload Dashboards
+**Upload Dashboards**
 Dashboards can be uploaded from the local disk by clicking on the Upload Dashboard tab.
 
 ![Dashboard Upload Page](images/upload-screen.png)
@@ -26,7 +26,7 @@ After choosing a file, the file is designated on the upload page.
 
 ![Upload  Chosen](images/upload-chosen.png)
 
-Clicking on the upload button uploads the dashboard and shows it on the View Dashboards page (the user will be redirected automatically).
+Clicking on the "Upload" button uploads the dashboard and shows it on the View Dashboards page (the user will be redirected automatically).
 
 ![Upload  Done](images/upload-done.png)
 
