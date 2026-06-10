@@ -10,7 +10,19 @@ The Halo shows control points and tools around the selected object.  The eight c
 
 The Side bar consists of two parts.  The top one, which we'll return to later, manages Tables, Filters, Views, and Charts.  The bottom part is used to configure objects.  It has multiple sections, each activated by clicking on the chevron next to the name.
 
-The *Shape* configurer is shown in the image, with its  components shown.  They are used to configure the fill (color) and opacity of the object, and other effects such  as whether the object casts a drop shadow. 
+The *Shape* configurer is shown in the image, with its  components shown.  They are used to configure physical properties of an object, including its position, rotation, size, scrolling, fill (color), stroke, opacity of the object, and other effects such  as whether the object casts a drop shadow. 
+
+![shape_configurer](images/shape-configurer.png)
+
+Position, rotation, and size are controlled from the position controller.
+
+![position controller](images/position-control.png)
+
+Fill, stroke, and effects are controlled from the stroke, fill, and effects controllers.
+
+![fill stroke and effects](images/color_and_effects.png)
+
+When stroke or fill color is clicked, the color chooser pops up.
 
 ![color chooser](images/color_chooser.png)
 
