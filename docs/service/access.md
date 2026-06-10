@@ -1,4 +1,4 @@
-## How Items are Accessed, Shared,  and Published
+
 This section describes how items (dashboards and tables) are accessed, published, and shared on the Galyleo service.
 
 ### Item URL
