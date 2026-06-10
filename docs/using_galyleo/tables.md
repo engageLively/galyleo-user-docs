@@ -96,7 +96,7 @@ Click on the Galyleo menu on Jupyter Lab.  This will bring up the Galyleo Servic
 
 Click on Upload Table.  This will bring up a table uploader:
 
-![Galyleo Upload] (images/upload.png)
+![Galyleo Upload](images/upload.png)
 
 Choose a file and then click Upload.  You will be returned to the Table Viewer in the service, where you will see your uploaded table:
 

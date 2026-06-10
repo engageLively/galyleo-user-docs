@@ -33,14 +33,13 @@ When an image is selected, a box appears in the Shape configurer, permitting the
 ![image url]( images/image_url.png)
 
 
-
 The *Text* controller only appears when a Text item is selected, and it is used to control the textual properties of a text object.  These are:
 
-- The font family and weight (fine to extra-bold)
+- The font family and weight.  Weight is family-dependent, but will generally run from fine to bold.
 - The font style (italic, underline)
 - The font size and color
 - Alignment
-- Whether and how lines are wrapped (no wrapping, wrap by words, wrap by character,s wrap only by words)
+- Whether and how lines are wrapped (no wrapping, wrap by words, wrap by characters, wrap only by words)
 - Whether the text box size is set by the user or grows and shrinks with the storing (this is the "constraint" box)
 - The padding control gives the spacing between the text boundary and the boundary of the object, in pixels
 
