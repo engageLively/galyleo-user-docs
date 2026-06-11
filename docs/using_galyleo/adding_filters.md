@@ -4,7 +4,7 @@ Once tables are in the dashboard, filters can be created and edited.  This is do
 
 ![Create Filter](images/filter-create.png)
 
-The filter must have a name, which cannot be the name of another filter or chart.  Type this in the input box, and select a widget type from the upper drop-down and a column name from the lower drop-down, then click "Create". Clicking "Close" closes the dialog without creating a new filter.
+The filter must have a name, which cannot be the name of another filter or chart.  Type this in the input box, and select a widget type from the upper drop-down and a column name from the lower drop-down, then click Create. Clicking Close closes the dialog without creating a new filter.
 
 
 Once the filter is created, it appears in the top-left corner of the dashboard.  The Filter is a physical object, and can be manipulated as with any other physical object on the dashboard, using the Halo and Sidebar as described above.  Put the dashboard into selection mode and move the filter as desired.

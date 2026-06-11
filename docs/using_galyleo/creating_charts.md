@@ -16,7 +16,7 @@ The Chart Editor is also brought up by clicking on the gear icon beside the name
 Once the Chart Editor pops up (it is the standard Google Chart Editor), choose the chart type either from the recommended charts on the start page, or click the Charts tab and then choose the chart type on the charts page.
 ![Edit  Chart 2](images/chart-edit-2.png)
 
-Then click customize and choose chart options.  We recommend that you *not* choose a title for the chart; Galyleo automatically generates a title based on the names of the columns chosen and the values of the filters used to drive the chart.
+Then click Customize and choose Chart Options.  We recommend that you *not* choose a title for the chart; Galyleo automatically generates a title based on the names of the columns chosen and the values of the filters used to drive the chart.
 ![Edit  Chart 3](images/chart-edit-3.png)
 
 
