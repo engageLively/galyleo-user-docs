@@ -40,4 +40,4 @@ And the first data row is:
 ```
    ["100% Bran","N","C",70,10,68.402973]
 ```
-Tables available to the user can be found by Clicking the Galyleo Service item on the menu bar, which will bring up the Galyleo Service in a new JupyterLab tab.  The tables available to the user are also always displayed in the Tables tab in the side bar.
+Tables available to the user can be found by clicking the Galyleo Service item on the menu bar, which will bring up the Galyleo Service in a new JupyterLab tab.  The tables available to the user are also always displayed in the Tables tab in the side bar.
