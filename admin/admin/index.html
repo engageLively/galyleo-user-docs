@@ -1,0 +1,4074 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../service/access/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Galyleo Administrator Guide - Galyleo User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#galyleo-hub-administrators-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Galyleo User Guide" class="md-header__button md-logo" aria-label="Galyleo User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Galyleo User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Galyleo Administrator Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Galyleo User Guide" class="md-nav__button md-logo" aria-label="Galyleo User Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Galyleo User Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galyleo UI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Galyleo UI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../galyleo_ui/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../galyleo_ui/top_bar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top Bar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../galyleo_ui/halo_sidebar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Halo and Side Bar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../galyleo_ui/context_menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Context Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_architecture/galyleo_and_sdtp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_architecture/tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_architecture/filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_architecture/views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Views
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_architecture/charts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Galyleo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Using Galyleo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_galyleo/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_galyleo/tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing a Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_galyleo/adding_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a Filter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_galyleo/creating_views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_galyleo/creating_charts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a Chart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galyleo Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Galyleo Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../service/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galyleo Service Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../service/web_ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Galyleo Service Web UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../service/api_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Galyleo Service API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../service/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../service/access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Items are Accessed, Shared, and Published
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galyleo Admin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Galyleo Admin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galyleo Administrator Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galyleo Administrator Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-i-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part I: Environment Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part I: Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-setting-up-your-gcp-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Setting Up Your GCP Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-required-tools-gcloud-kubectl-helm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Required Tools (gcloud, kubectl, Helm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-creating-a-service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Creating a Service Account
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-ii-infrastructure-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part II: Infrastructure Provisioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part II: Infrastructure Provisioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-creating-a-gke-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Creating a GKE Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Creating a GKE Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-using-the-cloud-console-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Using the Cloud Console (UI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-using-the-gcloud-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Using the gcloud Command Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-creating-a-kubernetes-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Creating a Kubernetes Namespace
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Creating a Kubernetes Namespace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-connecting-kubectl-to-your-gke-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Connecting kubectl to your GKE Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-what-is-a-kubernetes-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 What is a Kubernetes Namespace?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-creating-the-galyleo-hub-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Creating the galyleo-hub Namespace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-setting-up-a-gcs-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Setting up a GCS Bucket
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Setting up a GCS Bucket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-what-is-a-google-cloud-storage-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 What is a Google Cloud Storage Bucket?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-best-practices-for-galyleo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Best Practices for Galyleo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-creating-the-storage-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Creating the Storage Bucket
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-setting-up-the-cloud-datastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Setting up the Cloud Datastore
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Setting up the Cloud Datastore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-what-is-google-cloud-datastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 What is Google Cloud Datastore?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-datastore-concepts-for-galyleo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Datastore Concepts for Galyleo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-creating-the-datastore-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Creating the Datastore Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-setting-up-dns-and-google-oauth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Setting up DNS and Google OAuth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Setting up DNS and Google OAuth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-reserving-a-static-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Reserving a Static IP Address
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-configuring-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Configuring DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-iii-hub-configuration-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part III: Hub Configuration &amp; Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part III: Hub Configuration &amp; Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-hub-configuration-and-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Hub Configuration and Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Hub Configuration and Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-understanding-helm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Understanding Helm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-the-jupyterhub-helm-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 The JupyterHub Helm Chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-customizing-the-galyleo-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Customizing the Galyleo Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-the-galyleo-hub-configyaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. The Galyleo Hub config.yaml File
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. The Galyleo Hub config.yaml File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-full-configyaml-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 The Full config.yaml Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-configuration-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Configuration Walkthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-the-galyleo-service-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. The Galyleo Service YAML File
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. The Galyleo Service YAML File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-the-full-galyleo-serviceyaml-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 The Full galyleo-service.yaml Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-configuration-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Configuration Walkthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-managing-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Managing Secrets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Managing Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-the-problem-plaintext-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 The Problem: Plaintext Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-the-solution-google-secret-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 The Solution: Google Secret Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-secrets-required-for-galyleo-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Secrets Required for Galyleo Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-using-secrets-in-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Using Secrets in Kubernetes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-step-by-step-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5 Step-by-Step Instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-deploying-the-hub-and-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Deploying the Hub and Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Deploying the Hub and Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-deployment-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Deployment Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-the-start-fullsh-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 The start-full.sh Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-command-by-command-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 Command-by-Command Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-iv-operations-and-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part IV: Operations and Maintenance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part IV: Operations and Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#14-checking-status-with-kubectl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Checking Status with kubectl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-checking-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Checking Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-restarting-in-case-of-an-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Restarting in Case of an Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16authorizing-users-to-log-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.Authorizing Users to Log In
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.Authorizing Users to Log In">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-the-allowed_users-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1 The allowed_users List
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-the-allow_existing_users-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2 The allow_existing_users Flag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-granting-admin-privileges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Granting Admin Privileges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-scenario-1-pods-are-not-starting-correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1 Scenario 1: Pods Are Not Starting Correctly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-scenario-2-user-cant-log-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2 Scenario 2: User Can't Log In
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#183-scenario-3-the-galyleo-service-is-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3 Scenario 3: The Galyleo Service is Not Working
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#184-scenario-4-a-users-server-fails-to-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4 Scenario 4: A User's Server Fails to Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-extensions-and-new-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Extensions and New Environments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Extensions and New Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191-adding-new-user-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.1 Adding New User Environments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.1 Adding New User Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#192-example-adding-a-tensorflow-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.2 Example: Adding a "Tensorflow" Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-adding-hub-extensions-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Adding Hub Extensions (Services)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. Adding Hub Extensions (Services)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201-step-1-deploy-the-service-in-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.1 Step 1: Deploy the Service in Kubernetes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#202-step-2-integrate-the-service-with-jupyterhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.2 Step 2: Integrate the Service with JupyterHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#203-example-the-galyleo-service-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.3 Example: The Galyleo Service Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-v-advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part V: Advanced Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part V: Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-advanced-networking-using-a-dedicated-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Advanced Networking: Using a Dedicated VPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-vi-appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part VI: Appendix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part VI: Appendix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-galyleo_hubpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ** 21. galyleo_hub.py **
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-i-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part I: Environment Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part I: Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-setting-up-your-gcp-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Setting Up Your GCP Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-required-tools-gcloud-kubectl-helm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Required Tools (gcloud, kubectl, Helm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-creating-a-service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Creating a Service Account
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-ii-infrastructure-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part II: Infrastructure Provisioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part II: Infrastructure Provisioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-creating-a-gke-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Creating a GKE Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Creating a GKE Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-using-the-cloud-console-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Using the Cloud Console (UI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-using-the-gcloud-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Using the gcloud Command Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-creating-a-kubernetes-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Creating a Kubernetes Namespace
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Creating a Kubernetes Namespace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-connecting-kubectl-to-your-gke-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Connecting kubectl to your GKE Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-what-is-a-kubernetes-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 What is a Kubernetes Namespace?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-creating-the-galyleo-hub-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Creating the galyleo-hub Namespace
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-setting-up-a-gcs-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Setting up a GCS Bucket
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Setting up a GCS Bucket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-what-is-a-google-cloud-storage-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 What is a Google Cloud Storage Bucket?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-best-practices-for-galyleo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Best Practices for Galyleo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-creating-the-storage-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Creating the Storage Bucket
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-setting-up-the-cloud-datastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Setting up the Cloud Datastore
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Setting up the Cloud Datastore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-what-is-google-cloud-datastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 What is Google Cloud Datastore?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-datastore-concepts-for-galyleo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Datastore Concepts for Galyleo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-creating-the-datastore-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Creating the Datastore Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-setting-up-dns-and-google-oauth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Setting up DNS and Google OAuth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Setting up DNS and Google OAuth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-reserving-a-static-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Reserving a Static IP Address
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-configuring-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Configuring DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-iii-hub-configuration-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part III: Hub Configuration &amp; Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part III: Hub Configuration &amp; Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-hub-configuration-and-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Hub Configuration and Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Hub Configuration and Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-understanding-helm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Understanding Helm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-the-jupyterhub-helm-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 The JupyterHub Helm Chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-customizing-the-galyleo-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Customizing the Galyleo Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-the-galyleo-hub-configyaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. The Galyleo Hub config.yaml File
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. The Galyleo Hub config.yaml File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-full-configyaml-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 The Full config.yaml Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-configuration-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Configuration Walkthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-the-galyleo-service-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. The Galyleo Service YAML File
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. The Galyleo Service YAML File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-the-full-galyleo-serviceyaml-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 The Full galyleo-service.yaml Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-configuration-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Configuration Walkthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-managing-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Managing Secrets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Managing Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-the-problem-plaintext-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 The Problem: Plaintext Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-the-solution-google-secret-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 The Solution: Google Secret Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-secrets-required-for-galyleo-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Secrets Required for Galyleo Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-using-secrets-in-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Using Secrets in Kubernetes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-step-by-step-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5 Step-by-Step Instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-deploying-the-hub-and-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Deploying the Hub and Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Deploying the Hub and Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-deployment-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Deployment Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-the-start-fullsh-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 The start-full.sh Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-command-by-command-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 Command-by-Command Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-iv-operations-and-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part IV: Operations and Maintenance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part IV: Operations and Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#14-checking-status-with-kubectl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Checking Status with kubectl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-checking-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Checking Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-restarting-in-case-of-an-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Restarting in Case of an Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16authorizing-users-to-log-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.Authorizing Users to Log In
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.Authorizing Users to Log In">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-the-allowed_users-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1 The allowed_users List
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-the-allow_existing_users-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2 The allow_existing_users Flag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-granting-admin-privileges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Granting Admin Privileges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-scenario-1-pods-are-not-starting-correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1 Scenario 1: Pods Are Not Starting Correctly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-scenario-2-user-cant-log-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2 Scenario 2: User Can't Log In
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#183-scenario-3-the-galyleo-service-is-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3 Scenario 3: The Galyleo Service is Not Working
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#184-scenario-4-a-users-server-fails-to-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4 Scenario 4: A User's Server Fails to Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-extensions-and-new-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Extensions and New Environments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Extensions and New Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191-adding-new-user-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.1 Adding New User Environments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.1 Adding New User Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#192-example-adding-a-tensorflow-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.2 Example: Adding a "Tensorflow" Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-adding-hub-extensions-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Adding Hub Extensions (Services)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. Adding Hub Extensions (Services)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201-step-1-deploy-the-service-in-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.1 Step 1: Deploy the Service in Kubernetes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#202-step-2-integrate-the-service-with-jupyterhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.2 Step 2: Integrate the Service with JupyterHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#203-example-the-galyleo-service-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.3 Example: The Galyleo Service Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-v-advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part V: Advanced Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part V: Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-advanced-networking-using-a-dedicated-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Advanced Networking: Using a Dedicated VPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-vi-appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part VI: Appendix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part VI: Appendix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-galyleo_hubpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ** 21. galyleo_hub.py **
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="galyleo-hub-administrators-guide"><strong>Galyleo Hub Administrator's Guide</strong></h1>
+<h2 id="1-introduction"><strong>1. Introduction</strong></h2>
+<p>Welcome to the administrator's guide for Galyleo Hub. This guide provides a complete walkthrough for installing, configuring, and managing a Galyleo Hub instance on Google Cloud Platform (GCP).</p>
+<p>Galyleo Hub is built upon the <strong>Zero to JupyterHub with Kubernetes (Z2JH)</strong> project. As such, this guide is a companion to the official <a href="https://z2jh.jupyter.org/en/latest/administrator/index.html">Z2JH Administrator's Guide</a>, which serves as the foundational reference. This document provides an end-to-end tutorial covering the GCP environment, Kubernetes setup, Galyleo-specific services, and operational procedures.</p>
+<h2 id="part-i-environment-setup"><strong>Part I: Environment Setup</strong></h2>
+<p>This section covers the initial setup of your Google Cloud environment and the required tools.</p>
+<h3 id="2-setting-up-your-gcp-project"><strong>2. Setting Up Your GCP Project</strong></h3>
+<p>For security and resource management, we recommend deploying each Galyleo Hub instance in its own dedicated GCP project.</p>
+<ol>
+<li>Go to the <a href="https://console.cloud.google.com/">Google Cloud Console</a>.  </li>
+<li>In the top menu bar, click the project selector and then click <strong>"New Project"</strong>.  </li>
+<li>Give your project a descriptive name (e.g., galyleo-hub-production) and configure your organization and billing account.  </li>
+<li>Once the project is created, make sure it is selected in the project selector.  </li>
+<li>Enable the necessary APIs for your new project:  </li>
+<li>Kubernetes Engine API  </li>
+<li>Cloud Datastore API  </li>
+<li>Google Secret Manager API  </li>
+<li>Cloud Build API (if you plan to build container images)</li>
+</ol>
+<h3 id="3-required-tools-gcloud-kubectl-helm"><strong>3. Required Tools (gcloud, kubectl, Helm)</strong></h3>
+<p>The easiest way to get all the necessary command-line tools is to use the <strong>Google Cloud Shell</strong>, which comes pre-installed with everything you need.</p>
+<ul>
+<li><strong>To open Cloud Shell:</strong> Click the [&gt;_] icon in the top-right corner of the Google Cloud Console.</li>
+</ul>
+<p>If you prefer to work from your local machine, you will need to install:</p>
+<ol>
+<li><strong>gcloud CLI:</strong> The command-line tool for interacting with GCP. <a href="https://cloud.google.com/sdk/docs/install">Installation Guide</a>.  </li>
+<li><strong>kubectl:</strong> The command-line tool for interacting with Kubernetes clusters. You can install it via gcloud: gcloud components install kubectl.  </li>
+<li><strong>Helm:</strong> The package manager for Kubernetes. <a href="https://helm.sh/docs/intro/install/">Installation Guide</a>.  </li>
+<li><strong>gsutil:</strong> A tool for interacting with Google Cloud Storage. It is installed as part of the gcloud CLI.</li>
+</ol>
+<p>A significant advantage of using Google Cloud shell is that all required GCP  libraries are pre-installed and the user is pre-authenticated to the Google Cloud platform.</p>
+<h3 id="4-creating-a-service-account"><strong>4. Creating a Service Account</strong></h3>
+<p>A dedicated service account is essential for granting permissions to the Galyleo Hub infrastructure securely.  A service account is an email address (e.g. <a href="mailto:1024780277534-compute@developer.gserviceaccount.com">1024780277534-compute@developer.gserviceaccount.com</a>)  to which permissions can be attached.  Service accounts authenticate with ssh keys, which can be created from the IAM page.</p>
+<ol>
+<li>In the Cloud Console, navigate to <strong>IAM &amp; Admin &gt; Service Accounts</strong>.  </li>
+<li>Click <strong>"Create Service Account"</strong>.  </li>
+<li>Give it a name (e.g., galyleo-hub-admin) and a description.  </li>
+<li><strong>Grant the following IAM roles</strong> to this service account. These permissions are required for the hub to manage its own infrastructure and for the Galyleo services to function correctly:  </li>
+<li><strong>Kubernetes Engine Admin:</strong> Allows creating and managing GKE clusters.  </li>
+<li><strong>Compute Admin:</strong> Allows the GKE control plane to create and manage Compute Engine nodes (VMs) for the cluster.  </li>
+<li><strong>Service Account User:</strong> Allows GKE nodes to run as this service account.  </li>
+<li><strong>Storage Object Admin:</strong> Grants full control over objects in the GCS bucket used for Galyleo data.  </li>
+<li><strong>Cloud Datastore User:</strong> Allows the Galyleo service to read from and write to the permissions database.  </li>
+<li><strong>Artifact Registry Reader:</strong> Allows the cluster to pull container images from Google Artifact Registry. (If building your own images, you may also need "Artifact Registry Writer").  </li>
+<li>Create the service account. You do not need to create keys at this stage.</li>
+</ol>
+<h2 id="part-ii-infrastructure-provisioning"><strong>Part II: Infrastructure Provisioning</strong></h2>
+<p>This section covers the creation of the core infrastructure on GCP.</p>
+<h3 id="5-creating-a-gke-cluster"><strong>5. Creating a GKE Cluster</strong></h3>
+<p>The Galyleo Hub runs on the Google Kubernetes Engine (GKE). You can create the cluster using the Cloud Console UI or via the gcloud command line. Using the command line is repeatable and recommended.</p>
+<h4 id="51-using-the-cloud-console-ui"><strong>5.1 Using the Cloud Console (UI)</strong></h4>
+<ol>
+<li>Navigate to <strong>Kubernetes Engine &gt; Clusters</strong>.  </li>
+<li>Click <strong>"Create"</strong> and choose a <strong>GKE Standard</strong> cluster.  </li>
+<li><strong>Cluster basics:</strong> Give your cluster a name and select a region.  </li>
+<li><strong>Node Pools:</strong> This is critical for performance and cost.  </li>
+<li>It is recommended to have at least two node pools:  <ul>
+<li>A default-pool for core JupyterHub services (Proxy, Hub, etc.). A small machine type like e2-standard-2 is often sufficient.  </li>
+<li>A user-pool for the single-user notebook servers. Choose a machine type appropriate for your users' workloads (e.g., n2-standard-4 or larger). Enable cluster autoscaling on this pool.  </li>
+</ul>
+</li>
+<li><strong>Networking:</strong> Ensure the cluster has access to the internet to pull container images.  </li>
+<li><strong>Security:</strong> Under "Security," select the service account you created in the previous step.</li>
+</ol>
+<h4 id="52-using-the-gcloud-command-line"><strong>5.2 Using the gcloud Command Line</strong></h4>
+<p>Replace the placeholder values in the following script to create your cluster. This script creates a cluster with two separate node pools as recommended.</p>
+<pre><code>
+# Set variables for your configuration
+export PROJECT_ID=&quot;your-gcp-project-id&quot;
+export CLUSTER_NAME=&quot;galyleo-hub-cluster&quot;
+export REGION=&quot;us-central1&quot;
+export SERVICE_ACCOUNT_EMAIL=&quot;galyleo-hub-admin@${PROJECT_ID}.iam.gserviceaccount.com&quot;
+
+# Set your project context
+gcloud config set project $PROJECT_ID
+
+# --- Create the GKE Cluster with the core services node pool ---
+gcloud container clusters create $CLUSTER_NAME \
+  --region $REGION \
+  --machine-type &quot;e2-standard-2&quot; \
+  --num-nodes &quot;1&quot; \
+  --node-locations &quot;${REGION}-a,${REGION}-b&quot; \
+  --service-account $SERVICE_ACCOUNT_EMAIL \
+  --scopes &quot;[https://www.googleapis.com/auth/cloud-platform](https://www.googleapis.com/auth/cloud-platform)&quot;
+
+# Connect kubectl to the new cluster
+gcloud container clusters get-credentials $CLUSTER_NAME --region $REGION
+
+# --- Add a dedicated node pool for user notebooks with autoscaling ---
+gcloud container node-pools create &quot;user-pool&quot; \
+  --cluster $CLUSTER_NAME \
+  --region $REGION \
+  --machine-type &quot;n2-standard-4&quot; \
+  --num-nodes &quot;0&quot; \
+  --enable-autoscaling \
+  --min-nodes &quot;0&quot; \
+  --max-nodes &quot;10&quot; \
+  --service-account $SERVICE_ACCOUNT_EMAIL \
+  --scopes &quot;[https://www.googleapis.com/auth/cloud-platform](https://www.googleapis.com/auth/cloud-platform)&quot;
+
+</code></pre>
+<h3 id="6-creating-a-kubernetes-namespace"><strong>6. Creating a Kubernetes Namespace</strong></h3>
+<p>Before you can deploy the hub, you need to connect your command-line tools to your new cluster and create a dedicated workspace for the hub's components.</p>
+<h4 id="61-connecting-kubectl-to-your-gke-cluster"><strong>6.1 Connecting kubectl to your GKE Cluster</strong></h4>
+<p>After your GKE cluster has been created, your local kubectl command-line tool needs to be configured with the correct credentials and endpoint to communicate with it. The gcloud tool makes this simple.</p>
+<p>Run the following command, replacing the variables with your cluster's name and region:</p>
+<pre><code>
+# Set variables for your configuration
+export CLUSTER_NAME=&quot;galyleo-hub-cluster&quot;
+export REGION=&quot;us-central1&quot;
+
+# This command fetches credentials for your cluster and configures kubectl
+gcloud container clusters get-credentials $CLUSTER_NAME --region $REGION
+
+</code></pre>
+<p>You can verify the connection by asking kubectl to list the nodes in your cluster:</p>
+<pre><code>
+kubectl get nodes
+
+</code></pre>
+<p>You should see the nodes from the pools you created earlier.</p>
+<h4 id="62-what-is-a-kubernetes-namespace"><strong>6.2 What is a Kubernetes Namespace?</strong></h4>
+<p>A Kubernetes namespace provides a way to create a virtual cluster inside your physical cluster. Think of it like creating separate, walled-off offices inside a large building. Each namespace can have its own resources (applications, services, secrets) and policies.</p>
+<p>Using a dedicated namespace for your Galyleo Hub is a critical best practice for several reasons:</p>
+<ul>
+<li><strong>Isolation:</strong> It keeps all the components of your hub (the proxy, the hub itself, user notebooks, the Galyleo service) logically separate from any other applications you might run on the same cluster.  </li>
+<li><strong>Avoiding Naming Conflicts:</strong> Resources within one namespace can have the same names as resources in another without conflicting.  </li>
+<li><strong>Resource Management:</strong> You can set resource quotas (CPU, memory) on a per-namespace basis.  </li>
+<li><strong>Scoped Permissions:</strong> You can grant administrative permissions to a user for just a single namespace, without giving them control over the entire cluster.</li>
+</ul>
+<h4 id="63-creating-the-galyleo-hub-namespace"><strong>6.3 Creating the galyleo-hub Namespace</strong></h4>
+<p>We will create a single namespace called galyleo-hub to contain all the components of our deployment.</p>
+<pre><code>
+kubectl create namespace galyleo-hub
+
+</code></pre>
+<p>From this point forward, almost every kubectl and helm command you run should include the --namespace galyleo-hub flag to ensure you are working within this isolated environment.  If the --namespace galyleo-hub flag is omitted, the commands will be on the default namespace.  To set the default namespace to galyleo-hub, run the following command:</p>
+<pre><code>
+kubectl config set-context --current --namespace=galyleo-hub
+</code></pre>
+<h3 id="7-setting-up-a-gcs-bucket"><strong>7. Setting up a GCS Bucket</strong></h3>
+<p>The Galyleo Service requires a Google Cloud Storage (GCS) bucket to act as the central, persistent repository for all Galyleo tables (<code>.sdml</code> files) and dashboards (<code>.gd.json</code> files).</p>
+<h4 id="71-what-is-a-google-cloud-storage-bucket"><strong>7.1 What is a Google Cloud Storage Bucket?</strong></h4>
+<p>Google Cloud Storage is a high-performance, durable, and massively scalable object storage service. Think of a <strong>bucket</strong> as the primary container that holds your data, much like a top-level folder in a file system. Unlike a traditional file system, however, GCS offers enterprise-grade features that make it ideal for cloud applications:</p>
+<ul>
+<li><strong>High Performance:</strong> GCS is optimized for fast read and write operations, which is critical for loading and saving the datasets and dashboards used by Galyleo.  </li>
+<li><strong>Security:</strong> All data uploaded to GCS is automatically encrypted at rest, with no additional setup required. Access is controlled by granular IAM permissions.  </li>
+<li><strong>Durability and Availability:</strong> Data is stored redundantly across multiple locations to protect against hardware failure and ensure it's accessible when needed.  </li>
+<li><strong>Excellent Tooling:</strong> GCS is supported by powerful command-line tools like <code>gsutil</code> for administration and robust libraries like <code>gcsfs</code> for seamless access from Python environments like Jupyter notebooks.</li>
+</ul>
+<h4 id="72-best-practices-for-galyleo"><strong>7.2 Best Practices for Galyleo</strong></h4>
+<ul>
+<li><strong>Location:</strong> For production hubs, it is best practice to use a <strong>multi-region</strong> bucket. This provides the highest availability by storing your data in geographically separate locations.  </li>
+<li><strong>Access Control:</strong> <strong>Never</strong> make the storage bucket public. The Galyleo Hub is designed to act as a secure gateway, managing all reads and writes programmatically. You must enforce public access prevention.</li>
+</ul>
+<h4 id="73-creating-the-storage-bucket"><strong>7.3 Creating the Storage Bucket</strong></h4>
+<p>You can create the bucket using either the web-based Cloud Console or the <code>gsutil</code> command line.</p>
+<p><strong>Using the Cloud Console (UI)</strong></p>
+<ol>
+<li>In the Google Cloud Console, navigate to <strong>Cloud Storage &gt; Buckets</strong>.  </li>
+<li>Click <strong>"Create Bucket"</strong>.  </li>
+<li><strong>Name your bucket:</strong> Give it a globally unique name. This name will be used for your <code>GALYLEO_STORAGE_BUCKET</code> environment variable.  </li>
+<li><strong>Choose where to store your data:</strong> Select a <strong>Multi-region</strong> location for the best availability.  </li>
+<li><strong>Choose a storage class:</strong> <strong>Standard</strong> is the correct choice for frequently accessed data.  </li>
+<li><strong>Choose how to control access to objects:</strong> Select <strong>Uniform</strong>.  </li>
+<li><strong>Choose how to protect object data:</strong> Leave the defaults.  </li>
+<li><strong>Prevent public access:</strong> This is the most critical step. Ensure the box for <strong>"Enforce public access prevention on this bucket"</strong> is <strong>checked</strong>.  </li>
+<li>Click <strong>"Create"</strong>.</li>
+</ol>
+<p><strong>Using the <code>gsutil</code> Command Line</strong></p>
+<p>The <code>gsutil</code> tool provides a simple command for creating buckets.</p>
+<pre><code># Set variables for your configuratio
+export PROJECT_ID=&quot;your-gcp-project-id&quot;
+export BUCKET_NAME=&quot;your-globally-unique-bucket-name&quot; # e.g., galyleo-hub-storage-prod
+export LOCATION=&quot;US&quot; # Example multi-region
+# Create the bucket with recommended settings
+gsutil mb -p $PROJECT_ID -l $LOCATION -b on gs://$BUCKET_NAME/
+# Enforce public access prevention
+gsutil publicaccessblock set on gs://$BUCKET_NAME/
+</code></pre>
+<h3 id="8-setting-up-the-cloud-datastore"><strong>8. Setting up the Cloud Datastore</strong></h3>
+<p>The Galyleo Service uses Google Cloud Datastore to manage a simple but critical piece of data: the access permissions for every table and dashboard.</p>
+<h4 id="81-what-is-google-cloud-datastore"><strong>8.1 What is Google Cloud Datastore?</strong></h4>
+<p>Google Cloud Datastore is a highly scalable, fully managed NoSQL database. Unlike a traditional SQL database with rigid tables and columns, a NoSQL database stores data in a more flexible format, making it ideal for applications that need to evolve and scale easily.</p>
+<p>Datastore is an excellent choice for Galyleo's permissions system because:</p>
+<ul>
+<li><strong>It's Schemaless:</strong> We can store our simple permissions data without defining a rigid structure. If we need to add more information later, we can do so without complex database migrations.  </li>
+<li><strong>It's Fast for Key-Based Lookups:</strong> The primary way Galyleo checks permissions is by looking up an object's unique reference key. Datastore is optimized for exactly this kind of fast, direct lookup.  </li>
+<li><strong>It Scales Automatically:</strong> As your hub grows with more users and objects, Datastore handles the scaling in the background with no administrative overhead.</li>
+</ul>
+<h4 id="82-datastore-concepts-for-galyleo"><strong>8.2 Datastore Concepts for Galyleo</strong></h4>
+<p>Datastore has a simple hierarchy that we use to keep permissions organized and secure.</p>
+<ul>
+<li><strong>Database:</strong> A single project has a single Datastore database. The name of this database is your GCP Project ID.  </li>
+<li><strong>Namespace:</strong> Within that database, you can create <strong>namespaces</strong> to partition your data. This is how we achieve multi-tenancy. <strong>Each Galyleo Hub instance must have its own unique namespace.</strong> This ensures the permissions for a development hub can never interfere with a production hub, even if they are in the same project. The service uses the <code>GALYLEO_PERMISSIONS_NAMESPACE</code> environment variable to select the correct namespace.  </li>
+<li><strong>Entity &amp; Kind:</strong> An <strong>entity</strong> is the fundamental unit of storage, similar to a row in a SQL table. Each entity is of a certain <strong>kind</strong>, which is like the table name. For simplicity, Galyleo stores all permissions under a single kind: <code>"key"</code>.  </li>
+<li><strong>Key:</strong> Each entity has a unique <strong>key</strong>. For Galyleo, the key is the object's unique three-part reference string: <code>&lt;object-type&gt;/&lt;owner-email&gt;/&lt;object-name&gt;</code>.  </li>
+<li><strong>Properties:</strong> Each entity contains <strong>properties</strong>, which are the data values. We use a single property that holds a list of user emails who are permitted to access the object.</li>
+</ul>
+<h4 id="83-creating-the-datastore-database"><strong>8.3 Creating the Datastore Database</strong></h4>
+<p>Setting up the database is a one-time operation for your GCP project.</p>
+<p><strong>Using the Cloud Console (UI)</strong></p>
+<ol>
+<li>In the Google Cloud Console, navigate to the <strong>Datastore</strong> section (you can use the search bar at the top).  </li>
+<li>If this is the first time you've used Datastore in this project, you will be prompted to select a database mode. Choose <strong>Native Mode</strong>.  </li>
+<li>Next, you will be prompted to select a <strong>location</strong> for your database. This location cannot be changed later. Choose a location that is geographically close to your users and your GKE cluster.  </li>
+<li>Click <strong>"Create Database"</strong>. The provisioning process can take a few minutes.</li>
+</ol>
+<p>Once the database is active, you are done. The Galyleo Service will automatically create the namespace specified in your configuration on its first connection.</p>
+<p><strong>Using the <code>gcloud</code> Command Line</strong></p>
+<p>While the initial database creation is typically done via the UI, you can ensure the necessary API is enabled using <code>gcloud</code>.</p>
+<pre><code># Set your project ID
+export PROJECT_ID=&quot;your-gcp-project-id&quot;
+# Enable the Cloud Datastore API for your project
+gcloud services enable datastore.googleapis.com --project=$PROJECT_ID
+</code></pre>
+<h3 id="9-setting-up-dns-and-google-oauth"><strong>9. Setting up DNS and Google OAuth</strong></h3>
+<p>To make your Galyleo Hub accessible to users with a professional, easy-to-remember URL (e.g., <code>galyleo.your-company.com</code>) and to secure it with Google-based login, you need to configure three components: a static IP address, a DNS record, and Google OAuth credentials.</p>
+<h4 id="91-reserving-a-static-ip-address"><strong>9.1 Reserving a Static IP Address</strong></h4>
+<p><strong>What is a Static IP Address?</strong></p>
+<p>By default, cloud resources are often assigned <em>ephemeral</em> IP addresses, which can change if the resource is stopped and restarted. For a public-facing service like a JupyterHub, you need a permanent, unchanging address. A <strong>static IP address</strong> is an address that you reserve in your project and that remains yours until you explicitly release it.</p>
+<p><strong>Why is it necessary?</strong></p>
+<p>The Domain Name System (DNS) works by pointing a hostname to a specific IP address. If that IP address changes, your URL will break. Reserving a static IP gives you a stable target for your DNS record.</p>
+<p><strong>Using the Cloud Console (UI)</strong></p>
+<ol>
+<li>In the Google Cloud Console, navigate to <strong>VPC Network &gt; IP Addresses</strong>.  </li>
+<li>Click <strong>"Reserve External Static IP Address"</strong>.  </li>
+<li>Give the address a <strong>Name</strong> (e.g., <code>galyleo-hub-prod-ip</code>).  </li>
+<li>Choose the <strong>Region</strong> where you created your GKE cluster.  </li>
+<li>Click <strong>"Reserve"</strong>.  </li>
+<li>Take note of the IP address that is allocated.</li>
+</ol>
+<p><strong>Using the <code>gcloud</code> Command Line</strong></p>
+<pre><code># Set variables for your configuration
+export IP_ADDRESS_NAME=&quot;galyleo-hub-prod-ip&quot;
+export REGION=&quot;us-central1&quot;
+# Reserve the static IP address
+gcloud compute addresses create $IP_ADDRESS_NAME --region=$REGION
+# View the reserved IP address
+gcloud compute addresses describe $IP_ADDRESS_NAME --region=$REGION --format='value(address)'
+</code></pre>
+<h4 id="92-configuring-dns"><strong>9.2 Configuring DNS</strong></h4>
+<p><strong>What is DNS?</strong></p>
+<p>DNS (Domain Name System) is the phonebook of the internet. It translates human-friendly domain names (like <code>www.google.com</code>) into the IP addresses that computers use to connect to each other.</p>
+<p><strong>Why is it necessary?</strong></p>
+<p>You need to create a DNS record to point your desired hostname (e.g., <code>galyleo.your-company.com</code>) to the static IP address you reserved in the previous step.</p>
+<p><strong>Creating an A Record</strong></p>
+<p>This step is performed in your <strong>domain registrar's</strong> control panel (e.g., Google Domains, GoDaddy, Cloudflare).</p>
+<ol>
+<li>Log in to your domain registrar and navigate to the DNS management page for your domain.  </li>
+<li>Create a new DNS record with the following settings:  </li>
+<li><strong>Type:</strong> <code>A</code>  </li>
+<li><strong>Host</strong> or <strong>Name:</strong> The subdomain you want to use (e.g., <code>galyleo</code> for <code>galyleo.your-company.com</code>).  </li>
+<li><strong>Value</strong> or <strong>Points to:</strong> The static IP address you reserved.  </li>
+<li><strong>TTL (Time To Live):</strong> You can typically leave this at the default (e.g., 1 hour).  </li>
+<li>Save the record. Note that it can take anywhere from a few minutes to several hours for DNS changes to propagate across the internet.</li>
+</ol>
+<p>#### <strong>9.3 Creating Google OAuth Credentials</strong></p>
+<p><strong>What is OAuth?</strong></p>
+<p>OAuth is a secure authorization standard that allows users to log in to an application (like Galyleo Hub) using their existing Google account, without ever sharing their Google password with the application.</p>
+<p><strong>Why is it necessary?</strong></p>
+<p>JupyterHub uses OAuth as its primary authentication mechanism, ensuring that only authorized users from your organization can access the hub.</p>
+<p><strong>Creating an OAuth Client ID</strong></p>
+<ol>
+<li>In the Google Cloud Console, navigate to <strong>APIs &amp; Services &gt; Credentials</strong>.  </li>
+<li>Click <strong>"Create Credentials"</strong> and select <strong>"OAuth client ID"</strong>.  </li>
+<li>If prompted, you may need to configure an "OAuth consent screen" first. Fill out the required information for your organization.  </li>
+<li>For <strong>Application type</strong>, select <strong>"Web application"</strong>.  </li>
+<li>Give it a <strong>Name</strong> (e.g., "Galyleo Hub Production").  </li>
+<li>Under <strong>"Authorized redirect URIs"</strong>, click <strong>"Add URI"</strong>. This is a critical step. The URI must be your hub's domain followed by <code>/hub/oauth_callback</code>.  </li>
+<li>Example: <code>https://galyleo.your-company.com/hub/oauth_callback</code>  </li>
+<li>Click <strong>"Create"</strong>.  </li>
+<li>A window will pop up showing your <strong>Client ID</strong> and <strong>Client Secret</strong>. <strong>Copy both of these values immediately and store them securely.</strong> You will need them for your <code>config.yaml</code> file, and you cannot view the secret again after closing this window.</li>
+</ol>
+<h2 id="part-iii-hub-configuration-deployment"><strong>Part III: Hub Configuration &amp; Deployment</strong></h2>
+<h3 id="10-hub-configuration-and-deployment"><strong>10. Hub Configuration and Deployment</strong></h3>
+<p>With the cloud infrastructure in place, the next step is to configure and deploy the JupyterHub software itself. This is managed using a tool called Helm.</p>
+<h4 id="101-understanding-helm"><strong>10.1 Understanding Helm</strong></h4>
+<p><strong>Helm</strong> is often called "the package manager for Kubernetes." It's a tool that simplifies deploying and managing complex applications on a Kubernetes cluster.</p>
+<ul>
+<li><strong>Chart:</strong> A Helm <strong>chart</strong> is a collection of files that describe a related set of Kubernetes resources. Think of it as an installation package, like an <code>.rpm</code> or <code>.deb</code> file in Linux. It contains templates for all the necessary components (deployments, services, etc.) needed to run an application.  </li>
+<li><strong>Release:</strong> A <strong>release</strong> is a specific instance of a chart running in your cluster. You can install the same chart multiple times, and each one is a separate release.  </li>
+<li><strong>Values:</strong> A chart is a template. The specific configuration details are provided in a <strong>values</strong> file. For JupyterHub, this is our <code>config.yaml</code> file. It allows you to customize the deployment without ever modifying the chart's source code.</li>
+</ul>
+<h4 id="102-the-jupyterhub-helm-chart"><strong>10.2 The JupyterHub Helm Chart</strong></h4>
+<p>We don't build JupyterHub from scratch. We use the official, community-maintained Helm chart, which is the standard for deploying JupyterHub on Kubernetes. You can find the chart and its extensive documentation here:</p>
+<ul>
+<li><strong>JupyterHub Helm Chart Repository:</strong> <a href="https://jupyterhub.github.io/helm-chart/">https://jupyterhub.github.io/helm-chart/</a></li>
+</ul>
+<h4 id="103-customizing-the-galyleo-hub"><strong>10.3 Customizing the Galyleo Hub</strong></h4>
+<p>The power of the Helm chart is that it allows for deep customization. The Galyleo Hub is a specialized version of the standard JupyterHub, and we configure it in two primary ways:</p>
+<ol>
+<li><strong><code>config.yaml</code>:</strong> This is the main file where we define all our settings. This includes everything from the domain name and OAuth credentials to the specific Docker images available to users and the resources (CPU, memory) they are allocated. We will walk through the Galyleo Hub's <code>config.yaml</code> in the following sections.  </li>
+<li><strong>Custom Python Code (<code>galyleo_hub.py</code>):</strong> For more advanced customizations that can't be expressed in YAML, the Helm chart allows us to inject custom Python code directly into the Hub's configuration. We use this to implement the <code>GalyleoSpawner</code>, which provides a seamless experience for users accessing the Galyleo service from their notebooks.</li>
+</ol>
+<h3 id="11-the-galyleo-hub-configyaml-file"><strong>11. The Galyleo Hub config.yaml File</strong></h3>
+<p>The config.yaml file is the heart of your JupyterHub deployment. It's a single file where you define all the settings, secrets, and custom behaviors that make your hub unique. In this section, we will walk through the config.yaml used for the Galyleo Hub, explaining what each section does.</p>
+<h4 id="111-the-full-configyaml-template"><strong>11.1 The Full config.yaml Template</strong></h4>
+<p>Below is the complete, annotated config.yaml file. You should create a copy of this, name it config.yaml, and fill in the required secret values.</p>
+<pre><code>
+# config.yaml - Galyleo Hub Configuration
+# -----------------------------------------
+
+# proxy: Configures the public-facing entry point of the Hub.
+proxy:  
+  # A secret token to secure communication between the Hub and the proxy.
+  # Generate with: openssl rand -hex 32
+  secretToken: &quot;&quot; 
+
+  # Configures HTTPS for the hub.
+  https:
+    enabled: true
+    # The public hostname(s) of your hub.
+    hosts:
+      - &quot;galyleo-beta.engagelively.com&quot;
+    # Uses Let's Encrypt to automatically provision a free SSL certificate.
+    letsencrypt:
+      contactEmail: info@engagelively.com
+
+# hub: Core configuration for the JupyterHub application itself.
+hub:
+  # A secret key for signing browser cookies.
+  # Generate with: openssl rand -hex 32
+  cookieSecret: &quot;&quot;
+
+  # extraConfig allows us to inject custom Python code into the Hub's configuration.
+  # This is how we add Galyleo's unique features.
+  extraConfig: 
+    # Generic settings for the underlying web server.
+    myConfig: |
+      c.JupyterHub.tornado_settings = { 'headers': {'Content-Security-Policy': &quot;frame-ancestors https://*.engagelively.com &quot;}}
+      c.LabApp.user_settings_dir = '/usr/local/jupyter/.jupyter/lab/user-settings'
+
+    # This block loads our custom galyleo_hub.py script and runs the setup
+    # function to register the Galyleo service with the Hub.
+    10-galyleo-config: |
+      import sys
+      sys.path.insert(0, '/etc/jupyterhub/custom')
+      from galyleo_hub import setup_galyleo_service
+
+      # This token must match the GALYLEO_SERVICE_API_TOKEN in the service deployment.
+      galyleo_api_token = '' 
+      cluster_url = '[https://galyleo-beta.engagelively.com](https://galyleo-beta.engagelively.com)'
+      namespace = 'jh2-test'
+      setup_galyleo_service(c, cluster_url, namespace, galyleo_api_token)
+
+    # This block defines our custom GalyleoSpawner. Its job is to generate a
+    # user-specific API token and inject it as an environment variable into
+    # the user's notebook server when it starts.
+    11-galyleo-spawner_config: |
+      # [Full Python code for the GalyleoSpawner is omitted for brevity, 
+      #  it is sourced from the galyleo_hub.py file]
+      from kubespawner import KubeSpawner
+      from traitlets import Unicode
+      # ... GalyleoSpawner class definition ...
+      c.JupyterHub.spawner_class = GalyleoSpawner
+
+  # Configures the Google OAuth authenticator.
+  config:
+    GoogleOAuthenticator:
+      # Your OAuth Client ID from the Google Cloud Console.
+      client_id: &quot;&quot; 
+      # Your OAuth Client Secret from the Google Cloud Console.
+      client_secret: &quot;&quot; 
+      # The redirect URL you configured in your OAuth credentials.
+      oauth_callback_url: &quot;[https://galyleo-beta.engagelively.com/hub/oauth_callback](https://galyleo-beta.engagelively.com/hub/oauth_callback)&quot;
+
+    Authenticator:
+      # A list of Google accounts that will have admin privileges.
+      admin_users: 
+        - user1@example.com       
+        - user2@example.com
+      # A list of all Google accounts that are allowed to log in.
+      allowed_users:        
+        - user1@example.com        
+        - user2@example.com
+    # --- THIS IS THE KEY ---
+# Allows admins to add new users via the web UI after the hub has started.
+allow_existing_users: true
+# cull: Configures the idle notebook culler.
+cull:
+  # If true, the culler service is enabled.
+  enabled: true
+  # Timeout in seconds after which an idle server is shut down.
+  timeout: 3600
+  # How often, in seconds, to check for idle servers.
+  every: 300
+
+# singleuser: Configures the environment for each user's notebook server.
+singleuser:
+  # The default URL the user is redirected to after their server starts.
+  defaultUrl: &quot;/lab&quot;
+
+  # Configures the persistent storage volume for each user.
+  storage:
+    capacity: 25G
+
+  # Default resource limits for each user pod.
+  memory:
+    limit: 2G
+    guarantee: 100M
+  cpu:
+    limit: 0.97
+    guarantee: 0.002
+
+  # A list of selectable environments (Docker images) for users.
+  profileList:
+    - display_name: &quot;SciPy&quot;
+      description: &quot;Scientific Python with Galyleo&quot;
+      kubespawner_override: 
+        image: rickmcgeer/el-jupyter:scipy_0.0.9
+    - display_name: &quot;Data Science&quot;
+      description: &quot;Data Science libraries with Galyleo&quot;
+      kubespawner_override: 
+        image: rickmcgeer/el-jupyter:datascience_0.0.9
+    - display_name: &quot;Tensorflow&quot;
+      description: &quot;Tensorflow with Galyleo&quot;
+      kubespawner_override: 
+        image: rickmcgeer/el-jupyter:tensorflow_0.0.9
+
+</code></pre>
+<h4 id="112-configuration-walkthrough"><strong>11.2 Configuration Walkthrough</strong></h4>
+<p><strong><code>proxy</code></strong>: This section configures the public-facing component of JupyterHub. It sets up automatic HTTPS using Let's Encrypt for the specified <code>hosts</code> and uses <code>secretToken</code> to secure internal communications.</p>
+<p><strong><code>hub</code></strong>: This is the core of the configuration.</p>
+<ul>
+<li><code>cookieSecret</code>: A secret key used to secure browser session cookies.  </li>
+<li><code>extraConfig</code>: This is a powerful feature of the Helm chart that allows us to inject raw Python configuration. We use it to load our custom <code>galyleo_hub.py</code> script. This script defines the <code>GalyleoAuthenticator</code> (to manage user groups) and the <code>GalyleoSpawner</code> (to inject API tokens for the Galyleo service). This is the key mechanism for extending the base JupyterHub with Galyleo's features.  </li>
+<li><code>config</code>: This block configures the <code>GoogleOAuthenticator</code>.  </li>
+<li><code>GoogleOAuthenticator</code>: You must paste your <code>client_id</code> and <code>client_secret</code> here.  </li>
+<li><code>Authenticator</code>: This subsection controls user access.  <ul>
+<li><code>admin_users</code>: Defines which users have administrative rights.  </li>
+<li><code>allowed_users</code>: A whitelist of users who can log in when the hub first starts.  </li>
+<li><strong><code>allow_existing_users: true</code></strong>: This is a crucial setting. It permits any user who has been manually added to the Hub's database via the admin panel to log in, even if they are not in the initial <code>allowed_users</code> list. This is what enables dynamic user management without restarting the hub.  </li>
+</ul>
+</li>
+<li><strong><code>cull</code></strong>: This section enables and configures the <code>jupyterhub-idle-culler</code>, a service that automatically shuts down user notebook servers after they've been idle for a specified period (<code>timeout</code>). This is essential for managing resource costs in a cloud environment.  </li>
+<li><strong><code>singleuser</code></strong>: This section defines the environment for the individual user notebook servers.  </li>
+<li><code>storage</code>, <code>memory</code>, <code>cpu</code>: These set the default persistent storage size and resource limits for each user.  </li>
+<li><code>profileList</code>: This creates a dropdown menu on the spawner page, allowing users to select from different environments.</li>
+</ul>
+<h3 id="12-the-galyleo-service-yaml-file"><strong>12. The Galyleo Service YAML File</strong></h3>
+<p>The Galyleo Service is the backend that manages all tables and dashboards. It runs as a separate deployment within the same Kubernetes namespace as the JupyterHub. This allows it to communicate with the Hub for authentication while handling all the storage and permissions logic.</p>
+<p>Below is an annotated walkthrough of the galyleo-service.yaml file used to deploy the service.</p>
+<h4 id="121-the-full-galyleo-serviceyaml-template"><strong>12.1 The Full galyleo-service.yaml Template</strong></h4>
+<p>You will create a file named galyleo-service.yaml and populate it with the following content, filling in your specific secret values.</p>
+<pre><code>
+# galyleo-service.yaml
+# Deploys the Galyleo backend service.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: galyleo-service
+  namespace: jh2-test # Must match your Hub's namespace
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: galyleo-service
+  template:
+    metadata:
+      labels:
+        app: galyleo-service
+    spec:
+      containers:
+        - name: galyleo-service
+          image: rickmcgeer/galyleo_service_platform:latest
+          volumeMounts:
+            - name: keys-secret
+              mountPath: /app/.keys
+              readOnly: true
+          ports:
+            - containerPort: 5000
+          env:
+              # --- Service Account Credentials ---
+              - name: GOOGLE_APPLICATION_CREDENTIALS
+                value: &quot;/app/.keys/your-service-account-key.json&quot;
+
+              # --- Hub Integration ---
+              - name: JUPYTER_HUB_API_TOKEN
+                value: &quot;&quot; # An admin API token generated from the Hub UI
+              - name: JUPYTERHUB_API_URL
+                value: &quot;https://&lt;your-hub-domain&gt;/hub/api&quot;
+              - name: GALYLEO_SERVICE_API_TOKEN
+                value: &quot;&quot; # Must match 'galyleo_api_token' in config.yaml
+              - name: GALYLEO_SECRET_KEY
+                value: &quot;&quot; # Must match 'cookieSecret' in config.yaml
+
+              # --- GCP Project and Service Info ---
+              - name: GOOGLE_PROJECT
+                value: &quot;your-gcp-project-id&quot;
+              - name: BUCKET_NAME
+                value: &quot;your-galyleo-storage-bucket-name&quot;
+              - name: GALYLEO_PERMISSIONS_DATABASE
+                value: &quot;your-gcp-project-id&quot; # Typically the project ID
+              - name: GALYLEO_PERMISSIONS_NAMESPACE
+                value: &quot;galyleo-server&quot; # The namespace you chose
+              - name: GALYLEO_PORT
+                value: &quot;5000&quot;
+
+              # --- OAuth and Internal Service Configuration ---
+              - name: GALYLEO_CLIENT_ID
+                value: &quot;service-galyleo&quot;
+              - name: GALYLEO_ROOT_URL
+                value: &quot;http://localhost/services/galyleo&quot;
+      volumes:
+        - name: keys-secret
+          secret:
+            secretName: galyleo-keys # The Kubernetes secret holding your service account key
+---
+# Exposes the deployment as a network service within the cluster.
+apiVersion: v1
+kind: Service
+metadata:
+  name: galyleo-service
+  namespace: jh2-test # Must match your Hub's namespace
+spec:
+  selector:
+    app: galyleo-service
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+
+</code></pre>
+<h4 id="122-configuration-walkthrough"><strong>12.2 Configuration Walkthrough</strong></h4>
+<p>The galyleo-service.yaml file defines two Kubernetes objects: a <strong>Deployment</strong> and a <strong>Service</strong>.</p>
+<ul>
+<li><strong>Deployment</strong>: This tells Kubernetes how to run the Galyleo Service application, including which Docker image to use, how many replicas to run, and, most importantly, what environment variables to set.  </li>
+<li><strong>Service</strong>: This creates a stable internal network endpoint for the deployment. This is how the JupyterHub (and other components inside the cluster) can reliably find and talk to the Galyleo Service.</li>
+</ul>
+<p>The most critical part of this file is the env section, which configures the service:</p>
+<ul>
+<li><strong>GOOGLE_APPLICATION_CREDENTIALS</strong>: The path to the GCP service account key file, which must be mounted into the container from a Kubernetes secret. This gives the service its identity and permissions on Google Cloud.  </li>
+<li><strong>JUPYTER_HUB_API_TOKEN</strong>: An API token with admin privileges, which you must generate from the JupyterHub admin panel. This allows the Galyleo Service to query the Hub for user information.  </li>
+<li><strong>JUPYTERHUB_API_URL</strong>: The public API URL for your JupyterHub.  </li>
+<li><strong>GALYLEO_SERVICE_API_TOKEN</strong>: A secret token used to authorize communication <em>from</em> the Hub <em>to</em> the Galyleo Service. This value <strong>must exactly match</strong> the galyleo_api_token you set in the Hub's config.yaml.  </li>
+<li><strong>GALYLEO_SECRET_KEY</strong>: A secret key for signing its own tokens and sessions. This value <strong>must exactly match</strong> the cookieSecret you set in the Hub's config.yaml.  </li>
+<li><strong>BUCKET_NAME</strong>, <strong>GALYLEO_PERMISSIONS_DATABASE</strong>, <strong>GALYLEO_PERMISSIONS_NAMESPACE</strong>: These variables tell the service which GCS bucket and Datastore database/namespace to use for storage and permissions. They must match the resources you created in the earlier setup steps.</li>
+</ul>
+<pre><code>
+</code></pre>
+<h3 id="13-managing-secrets"><strong>13. Managing Secrets</strong></h3>
+<p>A secure deployment requires managing sensitive information—API tokens, secret keys, and service account credentials—without exposing them in your configuration files. Storing secrets directly in config.yaml or version control is a major security risk. This section outlines the best practices for managing secrets using Google Secret Manager and Kubernetes Secrets.</p>
+<h4 id="131-the-problem-plaintext-secrets"><strong>13.1 The Problem: Plaintext Secrets</strong></h4>
+<p>Your config.yaml and galyleo-service.yaml files require several pieces of sensitive information to function. If you paste these values directly into the files and commit them to a Git repository, anyone with access to that repository can compromise your entire system.</p>
+<h4 id="132-the-solution-google-secret-manager"><strong>13.2 The Solution: Google Secret Manager</strong></h4>
+<p>The recommended solution is to use Google Secret Manager, a centralized and secure vault for storing and managing sensitive data.</p>
+<p><strong>How it Works:</strong> Secret Manager stores your secrets (like API tokens) as named objects. Each secret can have multiple versions, allowing you to rotate keys without downtime. Access to these secrets is tightly controlled by GCP's IAM permissions. Your service accounts need the "Secret Manager Secret Accessor" role to read them.</p>
+<h4 id="133-secrets-required-for-galyleo-hub"><strong>13.3 Secrets Required for Galyleo Hub</strong></h4>
+<p>You will need to create the following secrets for a complete deployment:</p>
+<p>For the Hub (config.yaml):</p>
+<ul>
+<li>
+<p>proxy-secret-token: The value for proxy.secretToken.</p>
+</li>
+<li>
+<p>hub-cookie-secret: The value for hub.cookieSecret.</p>
+</li>
+<li>
+<p>google-oauth-client-id: The value for hub.config.GoogleOAuthenticator.client_id.</p>
+</li>
+<li>
+<p>google-oauth-client-secret: The value for hub.config.GoogleOAuthenticator.client_secret.</p>
+</li>
+<li>
+<p>galyleo-service-api-token: The value for hub.extraConfig.10-galyleo-config.galyleo_api_token.</p>
+</li>
+</ul>
+<p>For the Galyleo Service (galyleo-service.yaml):</p>
+<ul>
+<li>
+<p>jupyterhub-api-token: The admin token you generate from the Hub UI.</p>
+</li>
+<li>
+<p>gcp-service-account-key: The entire JSON key file for your service account.</p>
+</li>
+</ul>
+<h4 id="134-using-secrets-in-kubernetes"><strong>13.4 Using Secrets in Kubernetes</strong></h4>
+<p>There are two primary methods for making secrets from Secret Manager available to your applications running in Kubernetes:</p>
+<p>1. Mounting Secrets as Files (Best for Files)</p>
+<p>This is the ideal method for the gcp-service-account-key. The process is:</p>
+<ol>
+<li>
+<p>Store the JSON key file content as a secret in Secret Manager.</p>
+</li>
+<li>
+<p>Create a Kubernetes Secret object that pulls the value from Secret Manager.</p>
+</li>
+<li>
+<p>Mount that Kubernetes Secret as a volume into your container.</p>
+</li>
+</ol>
+<p>The galyleo-service.yaml already uses this pattern:</p>
+<pre><code>
+     volumeMounts:
+        - name: keys-secret
+          mountPath: /app/.keys
+          readOnly: true
+...
+      volumes:
+        - name: keys-secret
+          secret:
+            secretName: galyleo-keys
+
+</code></pre>
+<p>You would create the galyleo-keys Kubernetes secret, which securely holds your service account key file.</p>
+<p>2. Injecting Secrets as Environment Variables (Best for Tokens)</p>
+<p>This is the best method for all the other individual token and key values. You store the token in Secret Manager, and your Kubernetes deployment YAML references it, injecting the value into an environment variable at runtime. This prevents the secret from ever being written to disk inside the container.</p>
+<h4 id="135-step-by-step-instructions">13.5 Step-by-Step Instructions</h4>
+<p>1. Create the Secrets in Google Secret Manager:</p>
+<p>For each secret string (like your proxy token), run the following commands in the Cloud Shell:</p>
+<pre><code>
+# Create the secret container
+gcloud secrets create proxy-secret-token
+
+# Add the secret value as the first version
+# (Generate the actual value using openssl rand -hex 32)
+echo &quot;YOUR_GENERATED_PROXY_TOKEN&quot; | gcloud secrets versions add proxy-secret-token --data-file=-
+
+</code></pre>
+<p>Repeat this process for all the required secret strings.</p>
+<p>2. Give Your Service Account Access:</p>
+<p>Your GKE nodes' service account needs permission to access these secrets.</p>
+<pre><code>
+gcloud secrets add-iam-policy-binding proxy-secret-token \
+  --member=&quot;serviceAccount:YOUR_SERVICE_ACCOUNT_EMAIL&quot; \
+  --role=&quot;roles/secretmanager.secretAccessor&quot;
+
+</code></pre>
+<p>3. Reference the Secrets in Your Deployments:</p>
+<p>How you reference the secrets depends on whether you are using Helm (config.yaml) or a standard Kubernetes deployment (galyleo-service.yaml). The principle is to reference the secret by name rather than including its value. Your deployment manifests will contain instructions to fetch the secret's value directly from the secret store when the container starts.</p>
+<h3 id="14-deploying-the-hub-and-service"><strong>14. Deploying the Hub and Service</strong></h3>
+<p>Once all the prerequisite cloud resources are created and your configuration files are complete, you are ready to deploy the Galyleo Hub. This section walks through the commands in the <code>start-full.sh</code> script, explaining what each one does.</p>
+<h4 id="141-deployment-prerequisites"><strong>14.1 Deployment Prerequisites</strong></h4>
+<p>Before running the script, ensure you are in a directory containing the following files:</p>
+<ul>
+<li><code>config.yaml</code> (with all secrets filled in)  </li>
+<li><code>galyleo-service.yaml</code> (with all secrets filled in)  </li>
+<li><code>galyleo_hub.py</code>  </li>
+<li>Your GCP service account key file (e.g., <code>your-service-account-key.json</code>)</li>
+</ul>
+<p>You must also have the <code>jupyterhub/jupyterhub</code> Helm chart added to your local Helm repository. If you haven't done so, run:</p>
+<pre><code>helm repo add jupyterhub [https://jupyterhub.github.io/helm-chart/](https://jupyterhub.github.io/helm-chart/)
+helm repo update
+
+</code></pre>
+<h4 id="142-the-start-fullsh-script"><strong>14.2 The <code>start-full.sh</code> Script</strong></h4>
+<p>The deployment is a two-stage process: first, we deploy the JupyterHub using Helm, and second, we deploy the Galyleo Service using <code>kubectl</code>.</p>
+<pre><code>#!/bin/bash
+
+# Define a variable for your namespace to avoid repetition
+NAMESPACE=&quot;jhub-kct-free&quot;
+
+# --- Step 1: Create the Kubernetes Namespace ---
+kubectl create namespace $NAMESPACE
+
+# --- Step 2: Create the Kubernetes Secret for the Service Account ---
+kubectl create secret generic galyleo-keys --from-file=/path/to/your-service-account-key.json -n $NAMESPACE
+
+# --- Step 3: Create a ConfigMap for our custom Python code ---
+kubectl create configmap galyleo-hub-config --from-file=galyleo_hub.py -n $NAMESPACE
+
+# --- Step 4: Deploy JupyterHub using Helm ---
+helm upgrade --cleanup-on-fail \
+  --install jhub \
+  jupyterhub/jupyterhub \
+  --namespace $NAMESPACE \
+  --values config.yaml
+
+# --- Step 5: Deploy the Galyleo Service ---
+kubectl apply -f galyleo-service.yaml --namespace=$NAMESPACE
+
+</code></pre>
+<h4 id="143-command-by-command-explanation"><strong>14.3 Command-by-Command Explanation</strong></h4>
+<ol>
+<li><strong><code>kubectl create namespace $NAMESPACE</code></strong>  </li>
+<li>This creates the dedicated Kubernetes namespace where all components of your hub will live. This isolates your deployment from other applications running in the cluster.  </li>
+<li><strong><code>kubectl create secret generic galyleo-keys ...</code></strong>  </li>
+<li>This command takes your GCP service account JSON key file from your local machine and stores it as a secure <code>Secret</code> object within your Kubernetes namespace. This is what allows the Galyleo Service to securely access its credentials without them being in the deployment file.  </li>
+<li><strong><code>kubectl create configmap galyleo-hub-config ...</code></strong>  </li>
+<li>This takes your custom <code>galyleo_hub.py</code> file and stores it as a <code>ConfigMap</code>. The JupyterHub Helm chart is configured to automatically mount the contents of a ConfigMap named <code>galyleo-hub-config</code> into the Hub container at <code>/etc/jupyterhub/custom</code>, making our custom code available to the Hub at runtime.  </li>
+<li><strong><code>helm upgrade --install ...</code></strong>  </li>
+<li>This is the main command that deploys JupyterHub.  <ul>
+<li><code>helm upgrade --install</code>: This is an "upsert" command. It will install the chart if it's not already present, or upgrade it if it is. This makes the script safe to re-run.  </li>
+<li><code>jhub</code>: This is the <em>release name</em> for your deployment.  </li>
+<li><code>jupyterhub/jupyterhub</code>: The name of the chart we are deploying.  </li>
+<li><code>--namespace $NAMESPACE</code>: Specifies which namespace to deploy into.  </li>
+<li><code>--values config.yaml</code>: This is the most important flag. It tells Helm to use our <code>config.yaml</code> file to override all the default settings in the chart.  </li>
+</ul>
+</li>
+<li><strong><code>kubectl apply -f galyleo-service.yaml ...</code></strong>  </li>
+<li>After the Hub is deployed, this command deploys the Galyleo Service. <code>kubectl apply</code> reads the <code>galyleo-service.yaml</code> file and creates the Deployment and Service objects it defines within your namespace.</li>
+</ol>
+<pre><code>
+</code></pre>
+<h2 id="part-iv-operations-and-maintenance"><strong>Part IV: Operations and Maintenance</strong></h2>
+<h3 id="14-checking-status-with-kubectl"><strong>14. Checking Status with kubectl</strong></h3>
+<p>These commands are essential for monitoring your hub's health.</p>
+<ul>
+<li><strong>View all running components (pods):</strong></li>
+</ul>
+<pre><code>
+kubectl get pods --namespace galyleo-hub
+
+</code></pre>
+<p>(Look for a hub, proxy, galyleo, and user- pods. Their status should be Running.)</p>
+<ul>
+<li><strong>View services (like the proxy's load balancer):</strong></li>
+</ul>
+<pre><code>
+kubectl get services --namespace galyleo-hub
+
+</code></pre>
+<h3 id="15-checking-logs"><strong>15. Checking Logs</strong></h3>
+<p>If a pod is crashing or misbehaving, its logs are the first place to look.</p>
+<ul>
+<li><strong>Get logs for the main hub pod:</strong></li>
+</ul>
+<pre><code>
+kubectl logs deployment/hub --namespace galyleo-hub
+
+</code></pre>
+<ul>
+<li><strong>Get logs for the Galyleo service:</strong></li>
+</ul>
+<pre><code>
+kubectl logs deployment/galyleo --namespace galyleo-hub
+
+</code></pre>
+<ul>
+<li><strong>To follow logs in real-time, add the -f flag.</strong></li>
+</ul>
+<h3 id="16-restarting-in-case-of-an-error"><strong>16. Restarting in Case of an Error</strong></h3>
+<p>If you've applied a new configuration and a component is stuck, you can force a restart.</p>
+<ul>
+<li><strong>Restart the Hub and user pods:</strong></li>
+</ul>
+<pre><code>
+kubectl rollout restart deployment/hub --namespace galyleo-hub
+
+</code></pre>
+<ul>
+<li><strong>Restart the Galyleo service:</strong></li>
+</ul>
+<pre><code>kubectl rollout restart deployment/galyleo --namespace galyleo-hub
+
+</code></pre>
+<p>User management in a Galyleo-enabled Zero to JupyterHub (Z2JH) deployment is primarily handled through the config.yaml file, with real-time administration available through the JupyterHub Admin dashboard.</p>
+<h3 id="16authorizing-users-to-log-in"><strong>16.Authorizing Users to Log In</strong></h3>
+<p>For authenticators like Google or GitHub, users are not "added" manually. Instead, they are <em>authorized</em> to log in by adding their usernames (or email addresses) to a specific list in your config.yaml.</p>
+<h4 id="161-the-allowed_users-list"><strong>16.1 The allowed_users List</strong></h4>
+<p>To grant a user permission to log into the Hub, add their identifier to the allowed_users list under the Authenticator configuration.</p>
+<pre><code>
+# In your config.yaml
+hub:
+  config:
+    Authenticator:
+      allowed_users:        
+        - user-one@example.com        
+        - user-two@example.com
+
+</code></pre>
+<h3 id="162-the-allow_existing_users-flag"><strong>16.2 The allow_existing_users Flag</strong></h3>
+<p>The special flag allow_existing_users: true is also set. This tells the authenticator that it should allow any user who <em>already exists</em> in the JupyterHub database to log in. This is useful in advanced scenarios but for most cases, managing the allowed_users list is the primary method of controlling access.</p>
+<h3 id="17-granting-admin-privileges"><strong>17. Granting Admin Privileges</strong></h3>
+<p>You can grant administrative privileges to trusted users by adding them to the admin_users list in config.yaml. Administrators have access to the Admin Panel and can manage other users and their servers.</p>
+<pre><code>
+# In your config.yaml
+hub:
+  config:
+    Authenticator:
+      admin_users: 
+        - your-admin@example.com
+
+</code></pre>
+<h3 id="18-troubleshooting"><strong>18. Troubleshooting</strong></h3>
+<p>When a complex system like a Galyleo-enabled JupyterHub encounters issues, a methodical approach to debugging is key. This guide covers the most common failure scenarios and how to diagnose them using standard Kubernetes tools.</p>
+<p>The primary tool in your arsenal will always be kubectl, specifically the commands kubectl get pods, kubectl describe pod, and kubectl logs.</p>
+<h4 id="181-scenario-1-pods-are-not-starting-correctly"><strong>18.1 Scenario 1: Pods Are Not Starting Correctly</strong></h4>
+<p>If user servers are not spawning or the Hub itself is unavailable, the first step is to check the status of the pods in your namespace.</p>
+<pre><code>
+kubectl get pods -n your-namespace
+
+</code></pre>
+<p>Look for any pods with a status other than Running. Here are the most common issues:</p>
+<ul>
+<li><strong>Pending</strong>: The pod cannot be scheduled onto a node. This usually means your cluster has run out of resources (CPU or memory). You may need to add more nodes or use larger ones. Use kubectl describe pod \&lt;pod-name&gt; to see the specific reason.  </li>
+<li><strong>ImagePullBackOff</strong>: Kubernetes cannot pull the Docker image for the pod. This is almost always caused by:  </li>
+<li>A typo in the image name or tag in your config.yaml.  </li>
+<li>The image being in a private repository that the cluster does not have credentials to access.  </li>
+<li><strong>CrashLoopBackOff</strong>: The container is starting, crashing, and then being restarted by Kubernetes in a loop. This indicates a problem with the application itself. You must check the logs of the crashing pod to find the error.</li>
+</ul>
+<h4 id="182-scenario-2-user-cant-log-in"><strong>18.2 Scenario 2: User Can't Log In</strong></h4>
+<p>If a user is unable to log in, the JupyterHub logs are the best place to find the reason.</p>
+<ol>
+<li><strong>Find the Hub Pod Name</strong>:</li>
+</ol>
+<pre><code>
+kubectl get pods -n your-namespace | grep hub
+
+</code></pre>
+<ol>
+<li><strong>View the Hub Logs</strong>:</li>
+</ol>
+<pre><code>
+kubectl logs &lt;hub-pod-name&gt; -n your-namespace -f
+
+</code></pre>
+<ol>
+<li><em>(The -f flag will "follow" the logs in real-time.)</em></li>
+</ol>
+<p>Look for log entries related to the authenticator (e.g., GoogleOAuthenticator). Common causes include:</p>
+<ul>
+<li>The user is not in the allowed_users list in your config.yaml.  </li>
+<li>The OAuth clientId or clientSecret is incorrect.  </li>
+<li>The callbackUrl is misconfigured in your OAuth provider's settings.</li>
+</ul>
+<h4 id="183-scenario-3-the-galyleo-service-is-not-working"><strong>18.3 Scenario 3: The Galyleo Service is Not Working</strong></h4>
+<p>If users can log into the Hub but the Galyleo features are unavailable, the issue is likely with the Galyleo Service itself or the connection between it and the Hub.</p>
+<ol>
+<li><strong>Check if the Galyleo Service Pod is Running</strong>:</li>
+</ol>
+<pre><code>
+kubectl get pods -n your-namespace | grep galyleo-service
+
+</code></pre>
+<ol>
+<li>If it's not in a Running state, debug it like any other pod (see Scenario 1).  </li>
+<li><strong>Check the Galyleo Service Logs</strong>:</li>
+</ol>
+<pre><code>
+kubectl logs &lt;galyleo-service-pod-name&gt; -n your-namespace -f
+
+</code></pre>
+<ol>
+<li>Look for errors related to missing environment variables, incorrect secrets (like the GCP service account key), or a failure to connect to the Datastore or GCS.  </li>
+<li>Check the Hub Logs for Connection Errors:<br />
+   View the Hub logs as described in Scenario 2. The custom code in galyleo_hub.py makes API calls to the service. If the Hub cannot reach the Galyleo Service, you will see connection error messages in its logs. This often points to a networking issue within the Kubernetes cluster.</li>
+</ol>
+<h4 id="184-scenario-4-a-users-server-fails-to-start"><strong>18.4 Scenario 4: A User's Server Fails to Start</strong></h4>
+<p>If a specific user's server fails to launch after they log in, you need to check the logs for their individual pod.</p>
+<ol>
+<li><strong>Find the User's Pod Name</strong>: The pod will be named something like jupyter-\&lt;username&gt;.</li>
+</ol>
+<pre><code>
+kubectl get pods -n your-namespace | grep jupyter-
+
+</code></pre>
+<ol>
+<li><strong>Check the User's Pod Logs</strong>:</li>
+</ol>
+<pre><code>
+kubectl logs &lt;jupyter-username-pod-name&gt; -n your-namespace -f
+
+</code></pre>
+<ol>
+<li>This will show you any errors that occurred when the user's notebook server tried to start, which can help diagnose issues with their specific environment or image.</li>
+</ol>
+<h3 id="19-extensions-and-new-environments"><strong>19. Extensions and New Environments</strong></h3>
+<p>One of the most powerful features of a Zero to JupyterHub (Z2JH) deployment is its extensibility. You can easily expand the capabilities of your Hub by adding new user environments (e.g., different Docker containers with specialized tools) and new backend services or extensions.</p>
+<h4 id="191-adding-new-user-environments">19.1 <strong>Adding New User Environments</strong></h4>
+<p>A "new environment" is a different Docker container that provides users with an alternative set of tools or an entirely different web-based UI, such as a specialized editor. The Z2JH Helm chart makes it simple to offer users a choice of environments when their server starts.</p>
+<p>This is managed through the singleuser.profileList section in your config.yaml file.</p>
+<p>Each entry in the profileList creates a new option on the user's server spawn page. The key is the kubespawner_override, which allows you to specify a different Docker image for that option.</p>
+<h5 id="192-example-adding-a-tensorflow-environment"><strong>19.2 Example: Adding a "Tensorflow" Environment</strong></h5>
+<p>To add a new environment that uses a Docker image with Tensorflow pre-installed, you would add an entry like this to your config.yaml:</p>
+<pre><code>
+# In your config.yaml
+singleuser:
+  # ... other singleuser settings
+
+  profileList:
+    - display_name: &quot;Data Science (Default)&quot;
+      description: &quot;Standard data science environment with Galyleo.&quot;
+      kubespawner_override: 
+        image: rickmcgeer/el-jupyter:datascience_0.0.9
+
+    - display_name: &quot;Tensorflow&quot;
+      description: &quot;An environment with Tensorflow and GPU support.&quot;
+      kubespawner_override: 
+        image: rickmcgeer/el-jupyter:tensorflow_0.0.9 # &lt;-- The new environment's image
+        pullPolicy: Always
+
+</code></pre>
+<p><strong>Key Requirements:</strong></p>
+<ul>
+<li>The Docker image for a new environment must provide a web-based interface as its primary UI.  </li>
+<li>The image must be accessible from your Kubernetes cluster (i.e., in a public or configured private container registry).</li>
+</ul>
+<h3 id="20-adding-hub-extensions-services"><strong>20. Adding Hub Extensions (Services)</strong></h3>
+<p>An "extension" is a backend service that integrates with JupyterHub to provide additional functionality, much like the Galyleo Service itself. These services run as separate Deployments in your Kubernetes cluster and are made available to users through the Hub's proxy.</p>
+<p>The Galyleo Service provides the canonical architectural pattern for adding a new extension. The process involves two major steps:</p>
+<h4 id="201-step-1-deploy-the-service-in-kubernetes"><strong>20.1 Step 1: Deploy the Service in Kubernetes</strong></h4>
+<p>First, you must deploy your new service as a standard Kubernetes application, typically consisting of a Deployment and a Service. This is done with a dedicated YAML file (like galyleo-service.yaml).</p>
+<p>The service must be deployed in the same Kubernetes namespace as your JupyterHub instance so that the Hub's internal networking can discover it.</p>
+<h4 id="202-step-2-integrate-the-service-with-jupyterhub"><strong>20.2 Step 2: Integrate the Service with JupyterHub</strong></h4>
+<p>Next, you must tell the Hub about your new service and configure its permissions. This is done by injecting custom Python code into the Hub's configuration using the hub.extraConfig section of your config.yaml.</p>
+<p>This custom code, typically provided in a separate Python file (like galyleo_hub.py) and loaded via a ConfigMap, is responsible for:</p>
+<ol>
+<li><strong>Registering the service</strong>: Telling the Hub the internal URL of the new service.  </li>
+<li><strong>Configuring authentication and permissions</strong>: Defining which users or groups can access the new service.</li>
+</ol>
+<h4 id="203-example-the-galyleo-service-integration"><strong>20.3 Example: The Galyleo Service Integration</strong></h4>
+<p>The galyleo_hub.py script provides a perfect template. It contains a function, setup_galyleo_service, which is called from config.yaml. This function programmatically adds the Galyleo service to the Hub's list of services and sets up the necessary access roles.</p>
+<pre><code>
+# In galyleo_hub.py (simplified for clarity)
+
+def setup_galyleo_service(c, cluster_url, namespace, api_token):
+  # Internal URL for the service
+  url = f'http://galyleo-service.{namespace}.svc.cluster.local:5000'
+
+  # Register the service with the Hub
+  c.JupyterHub.services.append({
+      'name': 'galyleo',
+      'url': url,
+      'api_token': api_token,
+      'admin': True
+  })
+
+  # Define roles for user access
+  c.JupyterHub.load_roles.append({
+      'name': 'galyleo-user-role',
+      'scopes': ['access:services!service=galyleo'],
+      'groups': ['galyleo-users']
+  })
+
+</code></pre>
+<p>This modular approach allows you to add any number of powerful backend extensions to your JupyterHub, creating a rich, integrated environment for your users.</p>
+<h2 id="part-v-advanced-topics"><strong>Part V: Advanced Topics</strong></h2>
+<h3 id="21-advanced-networking-using-a-dedicated-vpc"><strong>21. Advanced Networking: Using a Dedicated VPC</strong></h3>
+<p>For production deployments, it is strongly recommended to run your GKE cluster inside a dedicated Virtual Private Cloud (VPC) network rather than the default VPC. This provides significant security and operational benefits.</p>
+<p><strong>Why use a dedicated VPC?</strong></p>
+<ul>
+<li><strong>Isolation:</strong> A dedicated VPC creates a private network for your hub, isolating its traffic from other GCP projects and services. This is a critical security measure.  </li>
+<li><strong>IP Range Control:</strong> It gives you full control over the IP address ranges for your nodes, pods, and services, preventing conflicts with other networks.  </li>
+<li><strong>Custom Firewall Rules:</strong> You can apply granular firewall rules to your hub's network without affecting other resources in your organization.</li>
+</ul>
+<p><strong>Creating and Using a Dedicated VPC</strong></p>
+<p>First, create the VPC and a subnet within it. Then, reference them when you create the GKE cluster.</p>
+<pre><code>
+# Set variables for your configuration
+export PROJECT_ID=&quot;your-gcp-project-id&quot;
+export REGION=&quot;us-central1&quot;
+export VPC_NETWORK_NAME=&quot;galyleo-hub-vpc&quot;
+export SUBNET_NAME=&quot;galyleo-hub-subnet&quot;
+export CLUSTER_NAME=&quot;galyleo-hub-cluster&quot; # Should match your cluster name
+export SERVICE_ACCOUNT_EMAIL=&quot;galyleo-hub-admin@${PROJECT_ID}.iam.gserviceaccount.com&quot;
+
+
+# 1. Create the custom VPC network
+gcloud compute networks create $VPC_NETWORK_NAME \
+  --project=$PROJECT_ID \
+  --subnet-mode=custom
+
+# 2. Create a subnet within the VPC
+gcloud compute networks subnets create $SUBNET_NAME \
+  --project=$PROJECT_ID \
+  --network=$VPC_NETWORK_NAME \
+  --region=$REGION \
+  --range=10.0.4.0/22 # Example IP range, adjust if needed
+
+# 3. Update your cluster creation command to use the new network
+# This command replaces the original `gcloud container clusters create`
+gcloud container clusters create $CLUSTER_NAME \
+  --region $REGION \
+  --network $VPC_NETWORK_NAME \
+  --subnetwork $SUBNET_NAME \
+  --machine-type &quot;e2-standard-2&quot; \
+  --num-nodes &quot;1&quot; \
+  --node-locations &quot;${REGION}-a,${REGION}-b&quot; \
+  --service-account $SERVICE_ACCOUNT_EMAIL \
+  --scopes &quot;[https://www.googleapis.com/auth/cloud-platform](https://www.googleapis.com/auth/cloud-platform)&quot;
+
+# Note: Remember to add the --network and --subnetwork flags
+# to any `gcloud container node-pools create` commands as well.
+
+</code></pre>
+<h2 id="part-vi-appendix"><strong>Part VI: Appendix</strong></h2>
+<h3 id="21-galyleo_hubpy">** 21. galyleo_hub.py **</h3>
+<pre><code># galyleo_hub.py
+'''
+Extensions to JupyterHub for Galyleo.  This involves:
+1. Setting up a new authenticator to add users to the
+   galyleo-users group to access the Galyleo service
+2. Setting up a new spawner to inject the GALYLEO_API_TOKEN
+   into the user's environment.
+'''
+import asyncio
+from jupyterhub.orm import User, Group
+from oauthenticator.google import GoogleOAuthenticator
+
+class GalyleoAuthenticator(GoogleOAuthenticator):
+  '''
+  An extension of GoogleOAuthenticator to add users to the
+  galyleo-users group to access the Galyleo service.
+  Parameters:
+    user: a User object
+  Returns:
+    None
+  '''
+  async def add_user(self, user):
+    self.log.info(f&quot;GalyleoAuthenticator.add_user: user={user.name}&quot;)
+    result = super().add_user(user)
+    if asyncio.iscoroutine(result):
+        await result
+    else:
+        self.log.info(f&quot;User already exists in Hub DB: {user.name}&quot;)
+    # Get the db user from the database
+    hub = self.parent
+    orm_user = hub.db.query(User).filter_by(name=user.name).first()
+    if orm_user is None:
+      self.log.error(f&quot;ORM user not found for {user.name}&quot;)
+      return
+    # Pull the galyleo-users group, creating it if it doesn't exist
+    group_name = &quot;galyleo-users&quot;
+    group = hub.db.query(Group).filter_by(name=group_name).first()
+
+    if not group:
+      self.log.info(f&quot;Creating group: {group_name}&quot;)
+      group = Group(name=group_name)
+      hub.db.add(group)
+      hub.db.commit()
+    # add the user to the group
+    if orm_user not in group.users:
+      self.log.info(f&quot;Adding {user.name} to group {group_name}&quot;)
+      group.users.append(orm_user)
+      hub.db.commit()
+
+def setup_galyleo_service(c, cluster_url, namespace, galyleo_api_token):
+  '''
+  Set up the Galyleo Service.  Adds the record for the service to JupyterHub.services, adds the roles for the Galyleo service to talk to the Hub and
+  get the user list, and the roles for users to access the Galyleo service.
+  Parameters:
+    c: the variable containting the JupyterHub
+    cluster_url: the url of the cluster, e.g. https://galyleo-beta.engageLively.com
+    namespace: the Kubernetes namespace.  Needed for the K8S URL of the service
+    galyleo_api_token: the API token for the Galyleo service (token for the service to access the Hub API)
+  Returns:
+    None
+  '''
+  url = f'http://galyleo-service.{namespace}.svc.cluster.local:5000'
+  oauth_redirect_uri = f'{cluster_url}/services/galyleo/callback'
+  c.JupyterHub.services.append(
+    {
+      'name': 'galyleo',
+      'url': url,
+      'api_token': galyleo_api_token,
+      'oauth_redirect_uri': oauth_redirect_uri,
+      'oauth_no_confirm': True,
+      'oauth_client_id': 'service-galyleo',
+      'oauth_client_allowed_scopes': ['access:services!service=galyleo'],
+      'admin': True,
+      # 'access': True
+    }
+  )
+  if not hasattr(c.JupyterHub, 'load_roles'):
+    c.JupyterHub.load_roles = []
+  c.JupyterHub.load_roles.append(
+    {
+      'name': 'galyleo-role',
+      'scopes': ['list:users'],
+      'services': ['galyleo'],
+    }
+  )
+  c.JupyterHub.load_roles.append(
+    {
+      'name': 'galyleo-user-role',
+      'scopes': ['access:services!service=galyleo'],
+      'roles': ['user', 'users'],
+      'groups': ['galyleo-users']
+    }
+  )
+  c.JupyterHub.authenticator_class = GalyleoAuthenticator
+  # make sure the URL loads the appropriate environment variables
+
+  c.Spawner.default_url=&quot;/lab?inJupyterLab=true&amp;galyleoServer=https://galyleo-beta.engagelively.com&amp;galyleo_storage_server=https://galyleo-beta.engagelively.com/services/galyleo/upload_dashboard&quot;
+
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
