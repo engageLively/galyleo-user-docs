@@ -17,7 +17,7 @@ curl https://galyleo-beta.engagelively.com/services/galyleo/get_table_names
 | publish	| POST |	- dashboard, a dashboard in Galyleo format <br> - name, _which must end in .gd.json_. <br> - Optionally, share_list, the list of users with access to the dashboard | 	Publish the dashboard as dashboards/_owner_/_name_ | No |
 | get_table_names	| GET |		None | Get the tables (as a list of URLs) accessible by this user| Yes |
 | get_table_schemas	| GET |	None |	Get the schemas of tables accessible by this user|  Yes |
-| get_table_schema	| GET |	- stable, the name of the table to get the schema for |	Get the schema of the table|  Yes |
+| get_table_schema	| GET |	- table, the name of the table to get the schema for |	Get the schema of the table|  Yes |
 | get_range_spec	| GET |	- table, the name of the table <br>- column, the name of the column |	Get the max and min of the column, as a list |  Yes |
 | get_all_values	| GET |	-  table, the name of the table, <br>- column, the name of the column	| Get the distinct values of the column, as a JSON list|  Yes |
 | get_column	| GET |	- table, the name of the table <br>-  column, the name of the column |	Get the column, as a JSON list|  Yes |
