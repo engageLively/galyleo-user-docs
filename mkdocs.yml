@@ -24,6 +24,7 @@ nav:
     - 'Adding a Filter': 'using_galyleo/adding_filters.md'
     - 'Creating a View': 'using_galyleo/creating_views.md'
     - 'Creating a Chart': 'using_galyleo/creating_charts.md'
+    - 'Working in the Notebook': 'using_galyleo/notebook_tips.md'
   - 'Galyleo Service':
     - 'Galyleo Service Overview': 'service/overview.md'
     - 'The Galyleo Service Web UI': 'service/web_ui.md'
